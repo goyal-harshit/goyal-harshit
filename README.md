@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./hero.svg?v=4" width="760" alt="Harshit Goyal — Software Engineering (SDE) & AI Systems" />
+<img src="./hero.svg?v=5" width="760" alt="Harshit Goyal — SDE Intern @ Samsung R&D | Software Engineering (SDE) & AI Systems" />
 
 <br />
 
@@ -14,8 +14,8 @@
 
 <br />
 
-> **Electrical Engineering @ IIT Delhi ('26)** · **Software Engineering (SDE) × AI Systems**  
-> I engineer production-grade software applications, multi-provider RAG platforms, high-performance algorithms, and developer intelligence tooling.
+> **Software Development Engineer (SDE) Intern @ Samsung R&D Institute** · **Electrical Engineering @ IIT Delhi ('26)**  
+> I engineer production-grade software applications, fine-tune Vision-Language Models (VLMs), multi-provider RAG platforms, knowledge graph developer tools, and logic synthesis automation tooling.
 
 ---
 
@@ -23,7 +23,7 @@
 
 | 📊 Key Engineering Benchmarks | 🛠 Technical Stack & Languages |
 | :---: | :---: |
-| <img src="./stats.svg?v=4" width="365" alt="Engineering Stats" /> | <img src="./langs.svg?v=4" width="365" alt="Top Languages" /> |
+| <img src="./stats.svg?v=5" width="365" alt="Engineering Stats" /> | <img src="./langs.svg?v=5" width="365" alt="Top Languages" /> |
 
 </div>
 
@@ -82,12 +82,14 @@
 
 ## 💼 Work Experience
 
-- 🏢 **Cadence Design Systems** — *Software Intern (2025)*  
-  Engineered software synthesis flow automation, developed Python netlist analysis tools, and authored TCL scripts for software flow optimization.
-- 🏢 **PwC India** — *Technology Consulting Intern (2024)*  
-  Engineered digitized financial and workflow management systems serving a **130M+ farmer** user base.
-- 🌍 **Cape Peninsula University of Technology, South Africa** — *AI Research Intern (2023–2024)*  
-  Developed AI/ML models for smart microgrid load forecasting and grid stability optimization.
+- 📱 **Samsung R&D Institute** — *Software Development Engineer (SDE) Intern (Jul 2026 – Present)*  
+  Training and fine-tuning Vision-Language Models (VLMs) to engineer custom multimodal AI solutions for product applications.
+- 🏢 **Cadence Design Systems** — *Software Development Intern (EDA) (May 2025 – Jul 2025)*  
+  Executed RTL-to-Pre-CTS synthesis flows on Genus and Innovus, built Python netlist-parsing tools extracting cell utilization &amp; QoR metrics, and migrated legacy TCL automation to Python.
+- 🏢 **PwC India** — *Technology Consulting Intern (Jun 2024 – Jul 2024)*  
+  Digitized financial workflows for a PACS cooperative network serving **130M+ farmers**; automated data processing in Python, cutting execution time by 15%.
+- 🌍 **Cape Peninsula University of Technology, South Africa** — *AI Research Intern (Dec 2023 – Jan 2024)*  
+  Researched AI-enabled smart microgrids and edge-deployment constraints, building a structured evaluation framework and technical report.
 
 ---
 
@@ -96,8 +98,8 @@
 | Domain | Technologies & Frameworks |
 |---|---|
 | **Software Engineering (SDE)** | Python, C++, TypeScript, SQL, TCL, Verilog, Data Structures & Algorithms, System Design |
-| **AI / ML & LLMs** | PyTorch, TensorFlow, scikit-learn, RAG (Retrieval-Augmented Generation), Vector DBs (ChromaDB), Knowledge Graphs (ArcadeDB, Cypher), Ollama, MediaPipe |
-| **Backend & Infrastructure** | FastAPI, Next.js 14, PostgreSQL, TimescaleDB, Redis, Celery, Docker, GitHub Actions, Linux, REST APIs, WebSockets |
+| **AI / ML & Multimodal VLMs** | PyTorch, Vision-Language Models (VLMs), TensorFlow, scikit-learn, RAG, Vector DBs (ChromaDB), Knowledge Graphs (ArcadeDB, Cypher), Ollama, MediaPipe |
+| **Backend & Infrastructure** | FastAPI, Next.js 14, PostgreSQL/TimescaleDB, Redis, Celery, Docker, GitHub Actions, Linux, REST APIs, WebSockets |
 
 ---
 
