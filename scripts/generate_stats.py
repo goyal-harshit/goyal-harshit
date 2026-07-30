@@ -198,10 +198,10 @@ def stats_card(user: dict | None = None) -> None:
       <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
 
       <g transform="translate(14, 48)">
-        <!-- Metric 1: Engineering Focus (Replaces repo count) -->
+        <!-- Metric 1: Engineering Focus (Fixed font size to prevent overflow) -->
         <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">ENGINEERING FOCUS</text>
-        <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="18" font-weight="800">SDE &amp; AI Systems</text>
+        <text x="12" y="45" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14.5" font-weight="800">SDE &amp; AI Systems</text>
 
         <!-- Metric 2: IIT Delhi Track -->
         <rect x="178" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
@@ -216,7 +216,7 @@ def stats_card(user: dict | None = None) -> None:
         <!-- Metric 4: ML Competition -->
         <rect x="178" y="72" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="190" y="92" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">FIFS ML GAMEATHON</text>
-        <text x="190" y="118" fill="#34d399" font-family="system-ui, sans-serif" font-size="18" font-weight="800">Rank #9 Nat'l</text>
+        <text x="190" y="118" fill="#34d399" font-family="system-ui, sans-serif" font-size="17" font-weight="800">Rank #9 Nat'l</text>
       </g>
     '''
     write("stats.svg", svg(370, 200, body, "Engineering & Profile Stats"))
