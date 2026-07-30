@@ -1,10 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="266" viewBox="0 0 760 266" role="img" aria-label="Harshit Goyal terminal identity">
   <rect width="100%" height="100%" rx="12" fill="#0d1117"/>
-  <text x="28" y="68" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700"> _   _    _    ____  ____  _   _ ___ _____</text>
-  <text x="28" y="90" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700">| | | |  / \  |  _ \|  _ \| | | |_ _|_   _|</text>
-  <text x="28" y="112" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700">| |_| | / _ \ | |_) | |_) | |_| || |  | |</text>
-  <text x="28" y="134" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700">|  _  |/ ___ \|  _ &lt;|  __/|  _  || |  | |</text>
-  <text x="28" y="156" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700">|_| |_/_/   \_\_| \_\_|   |_| |_|___| |_|</text>
-  <text x="28" y="208" fill="#8b949e" font-family="monospace" font-size="12">SOFTWARE / AI SYSTEMS  ×  SEMICONDUCTOR TOOLING</text>
-  <text x="28" y="234" fill="#d2a8ff" font-family="monospace" font-size="12">IIT DELHI · CLASS OF 2026</text>
+  <clipPath id="row0"><rect x="28" y="51" width="0" height="22"><animate attributeName="width" from="0" to="704" begin="0.00s" dur="1.1s" fill="freeze"/></rect></clipPath>
+        <text x="28" y="68" clip-path="url(#row0)" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700"> _   _    _    ____  ____  _   _ ___ _____</text><clipPath id="row1"><rect x="28" y="73" width="0" height="22"><animate attributeName="width" from="0" to="704" begin="0.16s" dur="1.1s" fill="freeze"/></rect></clipPath>
+        <text x="28" y="90" clip-path="url(#row1)" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700">| | | |  / \  |  _ \|  _ \| | | |_ _|_   _|</text><clipPath id="row2"><rect x="28" y="95" width="0" height="22"><animate attributeName="width" from="0" to="704" begin="0.32s" dur="1.1s" fill="freeze"/></rect></clipPath>
+        <text x="28" y="112" clip-path="url(#row2)" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700">| |_| | / _ \ | |_) | |_) | |_| || |  | |</text><clipPath id="row3"><rect x="28" y="117" width="0" height="22"><animate attributeName="width" from="0" to="704" begin="0.48s" dur="1.1s" fill="freeze"/></rect></clipPath>
+        <text x="28" y="134" clip-path="url(#row3)" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700">|  _  |/ ___ \|  _ &lt;|  __/|  _  || |  | |</text><clipPath id="row4"><rect x="28" y="139" width="0" height="22"><animate attributeName="width" from="0" to="704" begin="0.64s" dur="1.1s" fill="freeze"/></rect></clipPath>
+        <text x="28" y="156" clip-path="url(#row4)" fill="#58a6ff" font-family="monospace" font-size="17" font-weight="700">|_| |_/_/   \_\_| \_\_|   |_| |_|___| |_|</text><rect x="28" y="52" width="8" height="20" fill="#58a6ff"><animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/></rect><text x="28" y="208" fill="#8b949e" font-family="monospace" font-size="12" font-weight="400">SOFTWARE / AI SYSTEMS  ×  SEMICONDUCTOR TOOLING</text><text x="28" y="234" fill="#d2a8ff" font-family="monospace" font-size="12" font-weight="400">IIT DELHI · CLASS OF 2026</text>
 </svg>
