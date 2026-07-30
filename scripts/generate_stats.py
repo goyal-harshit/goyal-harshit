@@ -85,23 +85,13 @@ def write(name: str, content: str) -> None:
 
 
 def hero() -> None:
-    lines = [
-        " _   _    _    ____  ____  _   _ ___ _____",
-        "| | | |  / \\  |  _ \\|  _ \\| | | |_ _|_   _|",
-        "| |_| | / _ \\ | |_) | |_) | |_| || |  | |",
-        "|  _  |/ ___ \\|  _ <|  __/|  _  || |  | |",
-        "|_| |_/_/   \\_\\_| \\_\\_|   |_| |_|___| |_|",
-    ]
-    rows = []
-    for i, line in enumerate(lines):
-        y = 68 + i * 22
-        delay = f"{i * 0.16:.2f}s"
-        clip = f"row{i}"
-        rows.append(f'''<clipPath id="{clip}"><rect x="28" y="{y - 17}" width="0" height="22"><animate attributeName="width" from="0" to="704" begin="{delay}" dur="1.1s" fill="freeze"/></rect></clipPath>
-        <text x="28" y="{y}" clip-path="url(#{clip})" fill="{BLUE}" font-family="monospace" font-size="17" font-weight="700">{escape(line)}</text>''')
-    cursor = '<rect x="28" y="52" width="8" height="20" fill="#58a6ff"><animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/></rect>'
-    body = "".join(rows) + cursor + text(28, 208, "SOFTWARE / AI SYSTEMS  ×  SEMICONDUCTOR TOOLING", 12, MUTED) + text(28, 234, "IIT DELHI · CLASS OF 2026", 12, ACCENT)
-    write("hero.svg", svg(266, body, "Harshit Goyal terminal identity"))
+    body = '''
+      <text x="28" y="74" fill="#8b949e" font-family="monospace" font-size="12" letter-spacing="2">BUILDING USEFUL, RELIABLE SOFTWARE</text>
+      <text x="28" y="136" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="48" font-weight="750" letter-spacing="-1">HARSHIT GOYAL</text>
+      <rect x="28" y="158" width="86" height="4" rx="2" fill="#58a6ff"/>
+      <text x="28" y="204" fill="#58a6ff" font-family="monospace" font-size="15" font-weight="700">AI SYSTEMS · FULL-STACK ENGINEERING</text>
+      <text x="28" y="232" fill="#d2a8ff" font-family="monospace" font-size="12">IIT DELHI · ELECTRICAL ENGINEERING · 2026</text>'''
+    write("hero.svg", svg(262, body, "Harshit Goyal — AI systems and full-stack engineering"))
 
 
 def flat_days(user: dict) -> list[dict]:
@@ -175,18 +165,6 @@ def language_card(user: dict) -> None:
     write("langs.svg", svg(max(110, y + 8), "".join(rows), "Top languages across public repositories"))
 
 
-def year_card(days: list[dict]) -> None:
-    ramp = " .:-=+*#%@"
-    maximum = max((d["contributionCount"] for d in days), default=1) or 1
-    chars = [ramp[round(d["contributionCount"] / maximum * (len(ramp) - 1))] for d in days]
-    lines = ["".join(chars[i:i + 73]) for i in range(0, len(chars), 73)]
-    body = text(28, 34, "YEAR / ONE CHARACTER PER DAY", 12, MUTED)
-    for i, line in enumerate(lines):
-        body += text(28, 62 + i * 17, line, 12, GREEN)
-    body += text(28, 158, "quiet", 11, MUTED) + text(682, 158, "active", 11, MUTED)
-    write("year.svg", svg(182, body, "A public contribution year at one character per day"))
-
-
 def main() -> None:
     token = os.environ.get("GITHUB_TOKEN")
     login = os.environ.get("GH_LOGIN")
@@ -198,7 +176,6 @@ def main() -> None:
     stats_card(days, user["contributionsCollection"]["contributionCalendar"]["totalContributions"])
     streak_card(days)
     language_card(user)
-    year_card(days)
 
 
 if __name__ == "__main__":

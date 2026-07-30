@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="./hero.svg" width="760" alt="Harshit Goyal — self-typing terminal identity" />
+<img src="./hero.svg" width="760" alt="Harshit Goyal — AI systems and full-stack engineering" />
 
 </div>
 
-> Electrical Engineering at IIT Delhi · Software/AI systems and semiconductor tooling.
+> Electrical Engineering at IIT Delhi · AI systems and full-stack engineering.
 > I build reliable products where models, data infrastructure, and engineering constraints meet.
 
 <p align="center">
@@ -22,8 +22,6 @@
 <img src="./streak.svg" width="760" alt="Current and longest public contribution streaks" />
 <br />
 <img src="./langs.svg" width="760" alt="Top languages across public repositories" />
-<br />
-<img src="./year.svg" width="760" alt="One-character-per-day public contribution year" />
 
 <br />
 
