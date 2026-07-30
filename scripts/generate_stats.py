@@ -224,9 +224,9 @@ def stats_card(user: dict | None = None) -> None:
 
 def language_card(user: dict | None = None) -> None:
     top_langs = [
-        ("Python", "#38bdf8", 0.48, "VLMs / PyTorch / FastAPI"),
-        ("C++", "#f472b6", 0.22, "Core SDE / Systems"),
-        ("TypeScript", "#818cf8", 0.16, "Next.js 14 / React"),
+        ("Python", "#38bdf8", 0.48, "VLMs / PyTorch"),
+        ("C++", "#f472b6", 0.22, "Core SDE / Algos"),
+        ("TypeScript", "#818cf8", 0.16, "Next.js 14 / Web"),
         ("Verilog / TCL", "#c084fc", 0.09, "Scripting / Logic"),
         ("SQL / Cypher", "#34d399", 0.05, "Graph & Vector DBs"),
     ]
@@ -236,10 +236,10 @@ def language_card(user: dict | None = None) -> None:
     for name, color, pct, label in top_langs:
         pct_str = f"{pct:.0%}"
         rows.append(f'<text x="16" y="{y}" fill="{FG_MAIN}" font-family="system-ui, sans-serif" font-size="12" font-weight="600">{escape(name)}</text>')
-        rows.append(f'<text x="124" y="{y}" fill="{MUTED}" font-family="\'JetBrains Mono\', monospace" font-size="10">{pct_str} · {escape(label)}</text>')
-        bar_width = max(6, round(180 * pct))
-        rows.append(f'<rect x="220" y="{y - 10}" width="134" height="9" rx="4.5" fill="#0b0f19"/>')
-        rows.append(f'<rect x="220" y="{y - 10}" width="{min(134, bar_width)}" height="9" rx="4.5" fill="{color}"/>')
+        rows.append(f'<text x="108" y="{y}" fill="{MUTED}" font-family="\'JetBrains Mono\', monospace" font-size="9.5">{pct_str} · {escape(label)}</text>')
+        bar_width = max(6, round(110 * pct))
+        rows.append(f'<rect x="240" y="{y - 10}" width="114" height="8" rx="4" fill="#0b0f19"/>')
+        rows.append(f'<rect x="240" y="{y - 10}" width="{min(114, bar_width)}" height="8" rx="4" fill="{color}"/>')
         y += 27
 
     body = f'''

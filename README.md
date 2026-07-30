@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./hero.svg?v=11" width="760" alt="Harshit Goyal — SDE Associate @ Samsung R&D | Software Engineering (SDE) & AI Systems" />
+<img src="./hero.svg?v=12" width="760" alt="Harshit Goyal — SDE Associate @ Samsung R&D | Software Engineering (SDE) & AI Systems" />
 
 <br />
 
@@ -23,7 +23,7 @@
 
 | 📊 Key Engineering Benchmarks | 🛠 Technical Stack & Languages |
 | :---: | :---: |
-| <img src="./stats.svg?v=11" width="365" alt="Engineering Stats" /> | <img src="./langs.svg?v=11" width="365" alt="Top Languages" /> |
+| <img src="./stats.svg?v=12" width="365" alt="Engineering Stats" /> | <img src="./langs.svg?v=12" width="365" alt="Top Languages" /> |
 
 </div>
 
