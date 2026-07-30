@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="262" viewBox="0 0 760 262" role="img" aria-label="Harshit Goyal — AI systems and full-stack engineering">
   <rect width="100%" height="100%" rx="12" fill="#0d1117"/>
-  <text x="28" y="74" fill="#8b949e" font-family="monospace" font-size="12" letter-spacing="2">BUILDING USEFUL, RELIABLE SOFTWARE</text>
-  <text x="28" y="136" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="48" font-weight="750" letter-spacing="-1">HARSHIT GOYAL</text>
-  <rect x="28" y="158" width="86" height="4" rx="2" fill="#58a6ff"/>
-  <text x="28" y="204" fill="#58a6ff" font-family="monospace" font-size="15" font-weight="700">AI SYSTEMS · FULL-STACK ENGINEERING</text>
-  <text x="28" y="232" fill="#d2a8ff" font-family="monospace" font-size="12">IIT DELHI · ELECTRICAL ENGINEERING · 2026</text>
+  
+      <text x="28" y="74" fill="#8b949e" font-family="monospace" font-size="12" letter-spacing="2">BUILDING USEFUL, RELIABLE SOFTWARE</text>
+      <text x="28" y="136" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="48" font-weight="750" letter-spacing="-1">HARSHIT GOYAL</text>
+      <rect x="28" y="158" width="86" height="4" rx="2" fill="#58a6ff"/>
+      <text x="28" y="204" fill="#58a6ff" font-family="monospace" font-size="15" font-weight="700">AI SYSTEMS · FULL-STACK ENGINEERING</text>
+      <text x="28" y="232" fill="#d2a8ff" font-family="monospace" font-size="12">IIT DELHI · ELECTRICAL ENGINEERING · 2026</text>
 </svg>
