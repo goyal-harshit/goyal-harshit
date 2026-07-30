@@ -2,7 +2,7 @@
 """Draw this profile's local SVG graphics from GitHub's GraphQL API.
 
 Produces high-impact, Vercel/Linear-grade dark glassmorphic graphics
-highlighting Harshit Goyal's SDE, AI Systems, and EDA engineering track.
+highlighting Harshit Goyal's Software Engineering (SDE) and AI Systems track.
 """
 
 from __future__ import annotations
@@ -133,23 +133,23 @@ def hero() -> None:
         <text x="0" y="60" fill="url(#name_grad)" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="900" letter-spacing="-1">HARSHIT GOYAL</text>
         <rect x="0" y="70" width="150" height="4" rx="2" fill="url(#border_glow)"/>
 
-        <!-- Tagline -->
-        <text x="0" y="96" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">SOFTWARE ENGINEERING (SDE) · AI SYSTEMS · EDA TOOLING</text>
-        <text x="0" y="116" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Electrical Engineering @ IIT Delhi ('26)  ·  Ex-Cadence Software &amp; EDA Intern</text>
+        <!-- Tagline (SDE is main, no EDA Tooling in headline) -->
+        <text x="0" y="96" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">SOFTWARE ENGINEER (SDE) · AI &amp; DISTRIBUTED SYSTEMS</text>
+        <text x="0" y="116" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Electrical Engineering @ IIT Delhi ('26)  ·  Ex-Cadence Software Intern</text>
 
         <!-- Skill Badges -->
         <g transform="translate(0, 132)">
           <!-- Pill 1 -->
-          <rect x="0" y="0" width="168" height="26" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+          <rect x="0" y="0" width="170" height="26" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
           <text x="12" y="17" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">⚡ SOFTWARE ENG (SDE)</text>
 
           <!-- Pill 2 -->
-          <rect x="178" y="0" width="158" height="26" rx="6" fill="#0f172a" stroke="#818cf8" stroke-width="1"/>
-          <text x="190" y="17" fill="#818cf8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">🧠 AI SYSTEMS &amp; RAG</text>
+          <rect x="180" y="0" width="158" height="26" rx="6" fill="#0f172a" stroke="#818cf8" stroke-width="1"/>
+          <text x="192" y="17" fill="#818cf8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">🧠 AI SYSTEMS &amp; RAG</text>
 
           <!-- Pill 3 -->
-          <rect x="346" y="0" width="176" height="26" rx="6" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
-          <text x="358" y="17" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">⚙️ EDA &amp; COMPILER TOOLS</text>
+          <rect x="348" y="0" width="174" height="26" rx="6" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+          <text x="360" y="17" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">🖥️ DISTRIBUTED SYSTEMS</text>
 
           <!-- Pill 4 -->
           <rect x="532" y="0" width="170" height="26" rx="6" fill="#0f172a" stroke="#f472b6" stroke-width="1"/>
@@ -167,18 +167,18 @@ def hero() -> None:
 
         <!-- JSON Line 1 -->
         <text x="18" y="52" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"focus":</text>
-        <text x="110" y="52" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="12">"High-performance SDE applications, RAG platforms &amp; compiler/EDA tooling"</text>
+        <text x="110" y="52" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="12">"High-performance SDE applications, AI/RAG platforms &amp; scalable backends"</text>
 
         <!-- JSON Line 2 -->
         <text x="18" y="76" fill="#818cf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"stack":</text>
-        <text x="110" y="76" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12">"Python · C++ · TypeScript · FastAPI · Next.js · PostgreSQL · Docker · TCL"</text>
+        <text x="110" y="76" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12">"Python · C++ · TypeScript · FastAPI · Next.js · PostgreSQL · Docker · Redis"</text>
 
         <!-- JSON Line 3 -->
         <text x="18" y="100" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"metrics":</text>
         <text x="110" y="100" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"JEE Adv AIR 530  |  Top 9 National ML  |  0.28s AST Knowledge Graph Parser"</text>
       </g>
 '''
-    write("hero.svg", svg(WIDTH, 390, body, "Harshit Goyal — Software Engineering (SDE), AI Systems & EDA Tooling"))
+    write("hero.svg", svg(WIDTH, 390, body, "Harshit Goyal — Software Engineering (SDE) & AI Systems"))
 
 
 def stats_card(user: dict | None = None) -> None:
@@ -198,7 +198,7 @@ def stats_card(user: dict | None = None) -> None:
       <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
 
       <g transform="translate(14, 48)">
-        <!-- Metric 1: Engineering Focus (Fixed font size to prevent overflow) -->
+        <!-- Metric 1: Engineering Focus -->
         <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">ENGINEERING FOCUS</text>
         <text x="12" y="45" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14.5" font-weight="800">SDE &amp; AI Systems</text>
@@ -227,7 +227,7 @@ def language_card(user: dict | None = None) -> None:
         ("Python", "#38bdf8", 0.48, "AI / RAG / FastAPI"),
         ("C++", "#f472b6", 0.22, "Systems / DSA"),
         ("TypeScript", "#818cf8", 0.16, "Next.js / Web"),
-        ("Verilog / TCL", "#c084fc", 0.09, "EDA Automation"),
+        ("Verilog / TCL", "#c084fc", 0.09, "Scripting / Logic"),
         ("SQL / Cypher", "#34d399", 0.05, "Graph DBs"),
     ]
 

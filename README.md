@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./hero.svg?v=3" width="760" alt="Harshit Goyal — Software Engineering (SDE), AI Systems & EDA Tooling" />
+<img src="./hero.svg?v=4" width="760" alt="Harshit Goyal — Software Engineering (SDE) & AI Systems" />
 
 <br />
 
@@ -14,8 +14,8 @@
 
 <br />
 
-> **Electrical Engineering @ IIT Delhi ('26)** · **Software Engineering (SDE) × AI Systems × EDA Tooling**  
-> I engineer production-grade software systems, multi-provider RAG platforms, knowledge graph developer tools, and logic synthesis automation tooling.
+> **Electrical Engineering @ IIT Delhi ('26)** · **Software Engineering (SDE) × AI Systems**  
+> I engineer production-grade software applications, multi-provider RAG platforms, high-performance algorithms, and developer intelligence tooling.
 
 ---
 
@@ -23,7 +23,7 @@
 
 | 📊 Key Engineering Benchmarks | 🛠 Technical Stack & Languages |
 | :---: | :---: |
-| <img src="./stats.svg?v=3" width="365" alt="Engineering Stats" /> | <img src="./langs.svg?v=3" width="365" alt="Top Languages" /> |
+| <img src="./stats.svg?v=4" width="365" alt="Engineering Stats" /> | <img src="./langs.svg?v=4" width="365" alt="Top Languages" /> |
 
 </div>
 
@@ -82,8 +82,8 @@
 
 ## 💼 Work Experience
 
-- 🏢 **Cadence Design Systems** — *Software & EDA Intern (2025)*  
-  Engineered synthesis flow automation, developed Python netlist analysis tools, and authored TCL scripts for software synthesis flow optimization.
+- 🏢 **Cadence Design Systems** — *Software Intern (2025)*  
+  Engineered software synthesis flow automation, developed Python netlist analysis tools, and authored TCL scripts for software flow optimization.
 - 🏢 **PwC India** — *Technology Consulting Intern (2024)*  
   Engineered digitized financial and workflow management systems serving a **130M+ farmer** user base.
 - 🌍 **Cape Peninsula University of Technology, South Africa** — *AI Research Intern (2023–2024)*  
@@ -98,7 +98,6 @@
 | **Software Engineering (SDE)** | Python, C++, TypeScript, SQL, TCL, Verilog, Data Structures & Algorithms, System Design |
 | **AI / ML & LLMs** | PyTorch, TensorFlow, scikit-learn, RAG (Retrieval-Augmented Generation), Vector DBs (ChromaDB), Knowledge Graphs (ArcadeDB, Cypher), Ollama, MediaPipe |
 | **Backend & Infrastructure** | FastAPI, Next.js 14, PostgreSQL, TimescaleDB, Redis, Celery, Docker, GitHub Actions, Linux, REST APIs, WebSockets |
-| **EDA & Semiconductor** | Logic Synthesis Automation, STA, RTL Design, Cadence Genus & Innovus, Netlist Analysis Tools |
 
 ---
 
