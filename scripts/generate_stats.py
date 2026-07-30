@@ -16,15 +16,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 WIDTH = 760
-BG = "#0d1117"
-CARD_BG = "#161b22"
-BORDER = "#30363d"
-FG = "#e6edf3"
-MUTED = "#8b949e"
-BLUE = "#38bdf8"
-GREEN = "#3fb950"
+BG = "#090d16"
+CARD_BG = "#111726"
+BORDER = "#1f293d"
+FG = "#f1f5f9"
+MUTED = "#94a3b8"
+CYAN = "#38bdf8"
+GREEN = "#4ade80"
 PURPLE = "#c084fc"
-AMBER = "#f59e0b"
+AMBER = "#fbbf24"
+PINK = "#f472b6"
 
 
 def graphql(login: str, token: str) -> dict | None:
@@ -62,7 +63,7 @@ def graphql(login: str, token: str) -> dict | None:
 
 def svg(width: int, height: int, body: str, title: str) -> str:
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(title)}">
-  <rect width="100%" height="100%" rx="12" fill="{BG}"/>
+  <rect width="100%" height="100%" rx="14" fill="{BG}"/>
   {body}
 </svg>\n'''
 
@@ -84,112 +85,111 @@ def hero() -> None:
           <stop offset="100%" stop-color="#c084fc"/>
         </linearGradient>
         <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
-          <stop offset="100%" stop-color="#c084fc" stop-opacity="0.05"/>
+          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#c084fc" stop-opacity="0.04"/>
         </linearGradient>
-        <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-          <path d="M24 0H0V24" fill="none" stroke="#21262d" stroke-width="1"/>
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M20 0H0V20" fill="none" stroke="#1e293b" stroke-width="1"/>
         </pattern>
+        <filter id="neon_blur" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
       </defs>
 
-      <!-- Frame & Grid Background -->
-      <rect x="12" y="12" width="736" height="326" rx="12" fill="#0d1117" stroke="url(#edge)" stroke-width="1.5"/>
-      <rect x="12" y="12" width="736" height="326" rx="12" fill="url(#grid)" opacity="0.35"/>
-      <rect x="13" y="13" width="734" height="324" rx="11" fill="url(#glow)"/>
+      <!-- Frame & Tech Grid -->
+      <rect x="10" y="10" width="740" height="360" rx="14" fill="#090d16" stroke="url(#edge)" stroke-width="1.5"/>
+      <rect x="10" y="10" width="740" height="360" rx="14" fill="url(#grid)" opacity="0.4"/>
+      <rect x="11" y="11" width="738" height="358" rx="13" fill="url(#glow)"/>
 
-      <!-- Window Control Dots -->
-      <circle cx="38" cy="36" r="5" fill="#ff7b72"/>
-      <circle cx="56" cy="36" r="5" fill="#d29922"/>
-      <circle cx="74" cy="36" r="5" fill="#3fb950"/>
-      <text x="96" y="40" fill="#8b949e" font-family="monospace" font-size="11">profile://goyal-harshit ~ iit-delhi-ee'26</text>
-      <line x1="24" y1="54" x2="736" y2="54" stroke="#30363d"/>
+      <!-- Window Header Bar -->
+      <circle cx="34" cy="32" r="5" fill="#ef4444"/>
+      <circle cx="50" cy="32" r="5" fill="#f59e0b"/>
+      <circle cx="66" cy="32" r="5" fill="#10b981"/>
+      <text x="86" y="36" fill="#64748b" font-family="monospace" font-size="11">harshit@iit-delhi:~/builder-manifest $ ./ship_systems.sh --verbose</text>
+      <circle cx="718" cy="32" r="4" fill="#4ade80" filter="url(#neon_blur)"/>
+      <text x="635" y="36" fill="#4ade80" font-family="monospace" font-size="10" font-weight="700">🟢 ALWAYS BUILDING</text>
+      <line x1="20" y1="48" x2="740" y2="48" stroke="#1e293b"/>
 
-      <!-- Terminal Command & Name Header -->
-      <text x="36" y="82" fill="#8b949e" font-family="monospace" font-size="12">$ whoami</text>
-      <text x="36" y="128" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="800" letter-spacing="-0.5">HARSHIT GOYAL</text>
-      <rect x="36" y="142" width="120" height="4" rx="2" fill="url(#edge)"/>
+      <!-- Main Developer Title -->
+      <text x="32" y="78" fill="#94a3b8" font-family="monospace" font-size="12">$ whoami --fields=name,track,passions</text>
+      <text x="32" y="122" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="-1">HARSHIT GOYAL</text>
+      <rect x="32" y="134" width="140" height="4" rx="2" fill="url(#edge)"/>
 
       <!-- Subtitle Tagline -->
-      <text x="36" y="174" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="700">SOFTWARE (SDE) &amp; AI SYSTEMS · VLSI &amp; EDA ENGINEERING</text>
-      <text x="36" y="196" fill="#8b949e" font-family="system-ui, sans-serif" font-size="12">Electrical Engineering @ IIT Delhi | Ex-Cadence ASIC Synthesis Intern</text>
+      <text x="32" y="164" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="700">SOFTWARE (SDE) &amp; AI SYSTEMS ENGINEER · EDA TOOLING</text>
+      <text x="32" y="184" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Electrical Engineering @ IIT Delhi ('26) · Ex-Cadence Software &amp; EDA Intern</text>
 
       <!-- Pill Badges -->
-      <rect x="36" y="218" width="180" height="26" rx="13" fill="#161b22" stroke="#38bdf8" stroke-width="1"/>
-      <text x="48" y="235" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">SOFTWARE ENG (SDE)</text>
+      <rect x="32" y="204" width="170" height="26" rx="13" fill="#111726" stroke="#38bdf8" stroke-width="1"/>
+      <text x="44" y="221" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">SOFTWARE ENG (SDE)</text>
 
-      <rect x="226" y="218" width="168" height="26" rx="13" fill="#161b22" stroke="#818cf8" stroke-width="1"/>
-      <text x="238" y="235" fill="#818cf8" font-family="monospace" font-size="10" font-weight="700">AI SYSTEMS &amp; RAG</text>
+      <rect x="212" y="204" width="160" height="26" rx="13" fill="#111726" stroke="#818cf8" stroke-width="1"/>
+      <text x="224" y="221" fill="#818cf8" font-family="monospace" font-size="10" font-weight="700">AI SYSTEMS &amp; RAG</text>
 
-      <rect x="404" y="218" width="176" height="26" rx="13" fill="#161b22" stroke="#c084fc" stroke-width="1"/>
-      <text x="416" y="235" fill="#c084fc" font-family="monospace" font-size="10" font-weight="700">VLSI &amp; EDA TOOLING</text>
+      <rect x="382" y="204" width="170" height="26" rx="13" fill="#111726" stroke="#c084fc" stroke-width="1"/>
+      <text x="394" y="221" fill="#c084fc" font-family="monospace" font-size="10" font-weight="700">EDA &amp; COMPILER TOOLS</text>
 
-      <!-- Right Graphic / Circuit & Neural Mesh -->
-      <g opacity="0.6">
-        <path d="M600 80 H670 L700 110 V170 L670 200 H610 L580 170 V120 Z" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="4,2"/>
-        <path d="M620 100 H680 L690 110 V150" fill="none" stroke="#c084fc" stroke-width="1.2"/>
-        <circle cx="600" cy="80" r="3.5" fill="#38bdf8"/>
-        <circle cx="700" cy="110" r="3.5" fill="#c084fc"/>
-        <circle cx="670" cy="200" r="3.5" fill="#3fb950"/>
-        <circle cx="610" cy="200" r="3.5" fill="#f59e0b"/>
-        <circle cx="650" cy="135" r="5" fill="#38bdf8"/>
-      </g>
+      <rect x="562" y="204" width="158" height="26" rx="13" fill="#111726" stroke="#f472b6" stroke-width="1"/>
+      <text x="574" y="221" fill="#f472b6" font-family="monospace" font-size="10" font-weight="700">GRAPH ALGORITHMS</text>
 
-      <!-- Terminal Bottom Bar / Highlights -->
-      <rect x="36" y="264" width="688" height="60" rx="8" fill="#161b22" stroke="#21262d"/>
-      <text x="52" y="286" fill="#8b949e" font-family="monospace" font-size="11">$ cat highlights.json</text>
-      <text x="52" y="306" fill="#3fb950" font-family="monospace" font-size="11">✓ JEE Adv AIR 530</text>
-      <text x="200" y="306" fill="#38bdf8" font-family="monospace" font-size="11">✓ FIFS ML Top 9 National</text>
-      <text x="410" y="306" fill="#c084fc" font-family="monospace" font-size="11">✓ Cadence Synthesis Intern</text>
+      <!-- Tech Nerd Interactive Manifest Box -->
+      <rect x="32" y="246" width="688" height="110" rx="10" fill="#0d1322" stroke="#1e293b"/>
+      <text x="48" y="268" fill="#64748b" font-family="monospace" font-size="11">$ cat ~/builder_manifest.json</text>
+      
+      <text x="48" y="292" fill="#38bdf8" font-family="monospace" font-size="11">"status":</text>
+      <text x="125" y="292" fill="#f1f5f9" font-family="monospace" font-size="11">"Building fast, reliable software &amp; AI platforms that scale"</text>
+
+      <text x="48" y="314" fill="#818cf8" font-family="monospace" font-size="11">"loop":</text>
+      <text x="105" y="314" fill="#4ade80" font-family="monospace" font-size="11">["Identify Hard Problem", "Design Graph/RAG Arch", "Code &amp; Benchmark", "Ship 📦"]</text>
+
+      <text x="48" y="336" fill="#c084fc" font-family="monospace" font-size="11">"benchmarks":</text>
+      <text x="155" y="336" fill="#fbbf24" font-family="monospace" font-size="11">"0.28s AST Parser (388 fns) · JEE AIR 530 · FIFS ML Top 9 National"</text>
 '''
-    write("hero.svg", svg(WIDTH, 350, body, "Harshit Goyal — Software Engineering, AI Systems & VLSI EDA"))
+    write("hero.svg", svg(WIDTH, 380, body, "Harshit Goyal — Software Engineering (SDE), AI Systems & EDA Tooling"))
 
 
 def stats_card(user: dict | None = None) -> None:
     repo_count = len(user["repositories"]["nodes"]) if user else 12
 
     body = f'''
-      <defs>
-        <linearGradient id="stats_grad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#38bdf8"/>
-          <stop offset="100%" stop-color="#818cf8"/>
-        </linearGradient>
-      </defs>
-      <rect x="2" y="2" width="366" height="176" rx="10" fill="{CARD_BG}" stroke="{BORDER}"/>
-      {text(20, 28, "ENGINEERING & PROFILE STATS", 11, MUTED, 700)}
+      <rect x="2" y="2" width="366" height="186" rx="10" fill="{CARD_BG}" stroke="{BORDER}"/>
+      {text(18, 26, "⚡ REPO LOGIC & SYSTEM METRICS", 11, MUTED, 700)}
       
-      <!-- Metrics Grid -->
-      <g transform="translate(20, 48)">
+      <g transform="translate(18, 42)">
         <!-- Metric 1 -->
-        <rect x="0" y="0" width="156" height="52" rx="6" fill="#0d1117" stroke="#21262d"/>
+        <rect x="0" y="0" width="160" height="56" rx="8" fill="#090d16" stroke="#1f293d"/>
         {text(12, 22, "PUBLIC REPOS", 9, MUTED, 700)}
-        {text(12, 42, str(repo_count), 18, BLUE, 800)}
+        {text(12, 44, f"{repo_count}+ Shipped", 15, CYAN, 800)}
 
         <!-- Metric 2 -->
-        <rect x="170" y="0" width="156" height="52" rx="6" fill="#0d1117" stroke="#21262d"/>
-        {text(182, 22, "IIT DELHI TRACK", 9, MUTED, 700)}
-        {text(182, 42, "EE '26", 18, PURPLE, 800)}
+        <rect x="172" y="0" width="160" height="56" rx="8" fill="#090d16" stroke="#1f293d"/>
+        {text(184, 22, "IIT DELHI ALUM TRACK", 9, MUTED, 700)}
+        {text(184, 44, "EE Class '26", 15, PURPLE, 800)}
 
         <!-- Metric 3 -->
-        <rect x="0" y="60" width="156" height="52" rx="6" fill="#0d1117" stroke="#21262d"/>
-        {text(12, 82, "JEE ADVANCED", 9, MUTED, 700)}
-        {text(12, 102, "AIR 530", 18, GREEN, 800)}
+        <rect x="0" y="66" width="160" height="56" rx="8" fill="#090d16" stroke="#1f293d"/>
+        {text(12, 88, "JEE ADVANCED", 9, MUTED, 700)}
+        {text(12, 110, "AIR 530", 16, GREEN, 800)}
 
         <!-- Metric 4 -->
-        <rect x="170" y="60" width="156" height="52" rx="6" fill="#0d1117" stroke="#21262d"/>
-        {text(182, 82, "ML COMPETITION", 9, MUTED, 700)}
-        {text(182, 102, "Rank #9", 18, AMBER, 800)}
+        <rect x="172" y="66" width="160" height="56" rx="8" fill="#090d16" stroke="#1f293d"/>
+        {text(184, 88, "ML COMPETITION", 9, MUTED, 700)}
+        {text(184, 110, "Rank #9 National", 14, AMBER, 800)}
       </g>
+      
+      <rect x="18" y="168" width="332" height="1" fill="#1f293d"/>
     '''
-    write("stats.svg", svg(370, 180, body, "Engineering & Profile Stats"))
+    write("stats.svg", svg(370, 190, body, "Engineering & Profile Stats"))
 
 
 def language_card(user: dict | None = None) -> None:
     top_langs = [
-        ("Python", "#3572A5", 0.48, 6),
-        ("C++", "#f34b7d", 0.22, 3),
-        ("TypeScript", "#3178c6", 0.16, 3),
-        ("Verilog / TCL", "#b2b7f8", 0.09, 2),
-        ("SQL / Other", "#e34c26", 0.05, 4),
+        ("Python", "#38bdf8", 0.48, 6),
+        ("C++", "#f472b6", 0.22, 3),
+        ("TypeScript", "#818cf8", 0.16, 3),
+        ("Verilog / TCL", "#c084fc", 0.09, 2),
+        ("SQL / Cypher", "#4ade80", 0.05, 4),
     ]
 
     if user:
@@ -205,22 +205,22 @@ def language_card(user: dict | None = None) -> None:
             top = languages.most_common(5)
             top_langs = [(name, color, count / total, repos[name]) for (name, color), count in top]
 
-    rows = [text(20, 28, "TOP LANGUAGES & TECH STACK", 11, MUTED, 700)]
-    y = 54
+    rows = [text(18, 26, "💻 CORE LANGUAGES & STACK DISTRIBUTION", 11, MUTED, 700)]
+    y = 52
     for name, color, pct, r_count in top_langs:
         pct_str = f"{pct:.0%}"
-        rows.append(text(20, y, name[:14], 12, FG, 600))
+        rows.append(text(18, y, name[:14], 12, FG, 600))
         rows.append(text(125, y, f"{pct_str} · {r_count} repos", 10, MUTED))
         bar_width = max(6, round(180 * pct))
-        rows.append(f'<rect x="220" y="{y - 10}" width="130" height="8" rx="4" fill="#21262d"/>')
+        rows.append(f'<rect x="220" y="{y - 10}" width="130" height="8" rx="4" fill="#090d16"/>')
         rows.append(f'<rect x="220" y="{y - 10}" width="{min(130, bar_width)}" height="8" rx="4" fill="{color}"/>')
-        y += 24
+        y += 26
 
     body = f'''
-      <rect x="2" y="2" width="366" height="176" rx="10" fill="{CARD_BG}" stroke="{BORDER}"/>
+      <rect x="2" y="2" width="366" height="186" rx="10" fill="{CARD_BG}" stroke="{BORDER}"/>
       {"".join(rows)}
     '''
-    write("langs.svg", svg(370, 180, body, "Top languages across public repositories"))
+    write("langs.svg", svg(370, 190, body, "Top languages across public repositories"))
 
 
 def main() -> None:
