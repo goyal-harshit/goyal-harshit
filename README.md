@@ -1,54 +1,111 @@
 <div align="center">
 
-# Harshit Goyal
-
-**Software/AI Engineer × VLSI Engineer · Electrical Engineering, IIT Delhi ’26**
-
-*I build production-grade AI systems and semiconductor tooling — full-stack RAG platforms, knowledge-graph code analysis, gesture-driven generation, and RTL-to-Pre-CTS synthesis automation.*
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-goyal--harshit.github.io-3b82f6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://goyal-harshit.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/goyal-harshit-iitd/)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshitgoyal780p@gmail.com)
-
-[![Resume: Software/AI](https://img.shields.io/badge/Resume-Software%2FAI-22c55e?style=flat-square)](https://goyal-harshit.github.io/resume/Harshit_Goyal_Software_AI.pdf)
-[![Resume: VLSI](https://img.shields.io/badge/Resume-VLSI-a855f7?style=flat-square)](https://goyal-harshit.github.io/resume/Harshit_Goyal_VLSI.pdf)
+<img src="./hero.svg" width="760" alt="Harshit Goyal — self-typing terminal identity" />
 
 </div>
 
+> Electrical Engineering at IIT Delhi · Software/AI systems and semiconductor tooling.
+> I build reliable products where models, data infrastructure, and engineering constraints meet.
+
+<p align="center">
+  <a href="https://goyal-harshit.github.io">portfolio</a> ·
+  <a href="https://www.linkedin.com/in/goyal-harshit-iitd/">linkedin</a> ·
+  <a href="mailto:harshitgoyal780p@gmail.com">email</a> ·
+  <a href="https://goyal-harshit.github.io/resume/Harshit_Goyal_Software_AI.pdf">software/AI resume</a> ·
+  <a href="https://goyal-harshit.github.io/resume/Harshit_Goyal_VLSI.pdf">VLSI resume</a>
+</p>
+
+<br />
+
+<img src="./stats.svg" width="760" alt="Live public GitHub contribution total and weekly activity" />
+<br />
+<img src="./streak.svg" width="760" alt="Current and longest public contribution streaks" />
+<br />
+<img src="./langs.svg" width="760" alt="Top languages across public repositories" />
+<br />
+<img src="./year.svg" width="760" alt="One-character-per-day public contribution year" />
+
+<br />
+
+## selected_builds
+
+<table>
+  <tr>
+    <td width="50%">
+      <h3><a href="https://github.com/goyal-harshit/quant-analyzer">QuantAI</a></h3>
+      <samp>quant research · reliability engineering · RAG</samp>
+      <br /><br />
+      India-first research platform for NSE/BSE equities: factor screening, backtesting, portfolio tracking, Monte Carlo analysis, and a multi-provider research assistant. Designed with fallback chains, circuit breakers, and DB-first serving so the demo remains useful when upstream services fail.
+      <br /><br />
+      <a href="https://goyal-harshit.github.io/quant-analyzer">live demo →</a>
+    </td>
+    <td width="50%">
+      <h3><a href="https://github.com/goyal-harshit/codebase-intelligence-platform">Codebase Intelligence</a></h3>
+      <samp>knowledge graph · static analysis · developer tools</samp>
+      <br /><br />
+      Turns a Git repository into a knowledge graph and vector index for plain-English code Q&amp;A, architecture-risk detection, and change-impact analysis. The parser processed a Flask codebase in 0.28 s: 388 functions and 53 classes.
+      <br /><br />
+      <a href="https://goyal-harshit.github.io/codebase-intelligence-platform">live demo →</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3><a href="https://github.com/goyal-harshit/intuitive-prompt-engine">IntuitivePromptEngine</a></h3>
+      <samp>computer vision · HCI · generative AI</samp>
+      <br /><br />
+      Gesture-driven image generation: webcam signals become semantic intent, a persistent scene graph, and diffusion prompts. The pipeline is interface-driven and swappable—no typing required.
+      <br /><br />
+      <a href="https://goyal-harshit.github.io/intuitive-prompt-engine">live demo →</a>
+    </td>
+    <td width="50%">
+      <h3>EDA / VLSI tooling</h3>
+      <samp>RTL · synthesis · STA · automation</samp>
+      <br /><br />
+      At Cadence, I worked across the RTL-to-Pre-CTS flow with Genus and Innovus, plus Python netlist analysis and TCL flow automation. I’m interested in the software systems that make silicon implementation more reliable.
+      <br /><br />
+      <a href="https://goyal-harshit.github.io/vlsi/">VLSI portfolio →</a>
+    </td>
+  </tr>
+</table>
+
+## now
+
+- Building production-grade AI and data systems; exploring the overlap of developer tools, retrieval, and trustworthy automation.
+- Pursuing Electrical Engineering at IIT Delhi (Class of 2026), with a second engineering track in digital design and EDA.
+- Selected results: JEE Advanced AIR 530 · FIFS ML Gameathon 2025, 9th nationally.
+
+<details>
+<summary><samp>repository index / expand</samp></summary>
+<br />
+
+**Active systems**
+
+- [Codebase Intelligence Platform](https://github.com/goyal-harshit/codebase-intelligence-platform) — knowledge graph, retrieval, static analysis, and developer workflow tooling.
+- [QuantAI](https://github.com/goyal-harshit/quant-analyzer) — quantitative research and portfolio-analysis platform for Indian markets.
+- [IntuitivePromptEngine](https://github.com/goyal-harshit/intuitive-prompt-engine) — gesture-first generative image interface.
+- [Portfolio](https://github.com/goyal-harshit/goyal-harshit.github.io) — this public-facing Software/AI + VLSI portfolio.
+
+**Archived learning work**
+
+- [Co-operative Technology prototype](https://github.com/goyal-harshit/Co-operative-technology-website-prototype)
+- [C++ projects](https://github.com/goyal-harshit/cpp_projects)
+- [HTML projects](https://github.com/goyal-harshit/html-projects)
+- [Java projects](https://github.com/goyal-harshit/java_projects)
+- [Python projects](https://github.com/goyal-harshit/python-projects)
+
+</details>
+
+<details>
+<summary><samp>stack / expand</samp></summary>
+<br />
+
+- **Languages:** Python, C++, TypeScript, SQL, TCL, Verilog, MATLAB
+- **AI / data:** PyTorch, TensorFlow, scikit-learn, RAG, LLM APIs, Ollama, MediaPipe
+- **Systems:** FastAPI, Next.js, PostgreSQL, Redis, Docker, GitHub Actions, Linux
+- **Semiconductor:** RTL, logic synthesis, STA, Cadence Genus &amp; Innovus
+
+</details>
+
 ---
 
-## 🚀 Flagship Projects
-
-| Project | What it does | Stack |
-|---|---|---|
-| [**QuantAI**](https://github.com/goyal-harshit/quant-analyzer) · [live demo](https://goyal-harshit.github.io/quant-analyzer) | India-first quant research platform for NSE/BSE — factor screener, backtester, Monte Carlo quant lab, portfolio tracker with broker imports, and a **multi-LLM RAG research assistant**. 20+ domain modules, circuit-breaker reliability layer, JWT+CSRF auth, Prometheus observability. | FastAPI · Next.js 14 · PostgreSQL/TimescaleDB · Redis · Celery · Docker |
-| [**Codebase Intelligence Platform**](https://github.com/goyal-harshit/codebase-intelligence-platform) · [live demo](https://goyal-harshit.github.io/codebase-intelligence-platform) | Ingests any Git repo into a **knowledge graph + vector index** — plain-English code Q&A (NL→Cypher + semantic fallback), architecture risk detection, change-impact blast radius. Parsed Flask in **0.28s** (388 functions, 53 classes). | tree-sitter · ArcadeDB · ChromaDB · FastAPI · Next.js · Docker |
-| [**IntuitivePromptEngine**](https://github.com/goyal-harshit/intuitive-prompt-engine) · [live demo](https://goyal-harshit.github.io/intuitive-prompt-engine) | Gesture-driven image generation: webcam → semantic intent inference → persistent Scene Graph → diffusion prompts. **You never type a prompt.** Fully swappable pipeline, CI, Docker, MIT. | Python · MediaPipe · FastAPI · WebSocket · Ollama · FLUX/SDXL |
-| **AI/ML Fantasy Cricket Predictor** | Ensemble ML for fantasy team optimization — **ranked 9th nationally**, FIFS Gameathon 2025 (Google Cloud & Dream11). | PyTorch · scikit-learn · Pandas |
-
-## 💼 Experience
-
-- **Cadence Design Systems** — ASIC Synthesis / EDA Software Intern (2025): RTL-to-Pre-CTS synthesis on Genus/Innovus, Python netlist analysis tooling, TCL flow automation
-- **PwC India** — Technology Consulting Intern (2024): digitized financial workflows serving a **130M+ farmer** user base
-- **Cape Peninsula University of Technology, South Africa** — AI Research Intern (2023–24): AI-enabled smart microgrids
-
-## 🛠 Skills
-
-**Languages** — Python · C++ · TypeScript · SQL · TCL · Verilog · MATLAB
-**AI/ML** — PyTorch · TensorFlow · scikit-learn · RAG & embeddings · LLM APIs · Ollama · MediaPipe
-**Backend & Infra** — FastAPI · Next.js · PostgreSQL · Redis · MongoDB · ChromaDB · Docker · GitHub Actions · Linux
-**Semiconductor** — RTL design · Logic synthesis · STA · Cadence Genus & Innovus · Chip design flow
-
-## 🏆 Achievements
-
-- **JEE Advanced 2022 — AIR 530** (GE) among 250,000+ candidates · JEE Main **99.74 percentile** among 1M+
-- **FIFS ML Gameathon 2025 — 9th nationally** (Google Cloud & Dream11)
-
----
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=goyal-harshit&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=goyal-harshit&layout=compact&theme=tokyonight&hide_border=true&hide=html,css,batchfile,mako,powershell)
-
-</div>
+<p align="center"><samp>this profile is drawn by its own repository · public data only · refreshes daily</samp></p>
