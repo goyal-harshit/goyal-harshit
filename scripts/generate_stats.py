@@ -182,8 +182,6 @@ def hero() -> None:
 
 
 def stats_card(user: dict | None = None) -> None:
-    repo_count = len(user["repositories"]["nodes"]) if user else 12
-
     body = f'''
       <defs>
         <linearGradient id="card_grad" x1="0" y1="0" x2="0" y2="1">
@@ -196,29 +194,29 @@ def stats_card(user: dict | None = None) -> None:
 
       <!-- Card Title Bar -->
       <rect x="1" y="1" width="368" height="36" rx="11" fill="#0f172a" opacity="0.9"/>
-      <text x="16" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">📊 REPO &amp; COMPETITIVE METRICS</text>
+      <text x="16" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">📊 ENGINEERING &amp; COMPETITIVE METRICS</text>
       <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
 
       <g transform="translate(14, 48)">
-        <!-- Metric 1: Public Repos -->
+        <!-- Metric 1: Engineering Focus (Replaces repo count) -->
         <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
-        <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">PUBLIC REPOSITORIES</text>
-        <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="20" font-weight="800">{repo_count}+ Systems</text>
+        <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">ENGINEERING FOCUS</text>
+        <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="18" font-weight="800">SDE &amp; AI Systems</text>
 
         <!-- Metric 2: IIT Delhi Track -->
         <rect x="178" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="190" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">IIT DELHI TRACK</text>
-        <text x="190" y="46" fill="#c084fc" font-family="system-ui, sans-serif" font-size="20" font-weight="800">EE Class '26</text>
+        <text x="190" y="46" fill="#c084fc" font-family="system-ui, sans-serif" font-size="18" font-weight="800">EE Class '26</text>
 
         <!-- Metric 3: JEE Adv AIR 530 -->
         <rect x="0" y="72" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="12" y="92" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">JEE ADVANCED 2022</text>
-        <text x="12" y="118" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="20" font-weight="800">AIR 530</text>
+        <text x="12" y="118" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="18" font-weight="800">AIR 530</text>
 
         <!-- Metric 4: ML Competition -->
         <rect x="178" y="72" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="190" y="92" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">FIFS ML GAMEATHON</text>
-        <text x="190" y="118" fill="#34d399" font-family="system-ui, sans-serif" font-size="20" font-weight="800">Rank #9 Nat'l</text>
+        <text x="190" y="118" fill="#34d399" font-family="system-ui, sans-serif" font-size="18" font-weight="800">Rank #9 Nat'l</text>
       </g>
     '''
     write("stats.svg", svg(370, 200, body, "Engineering & Profile Stats"))
@@ -226,32 +224,19 @@ def stats_card(user: dict | None = None) -> None:
 
 def language_card(user: dict | None = None) -> None:
     top_langs = [
-        ("Python", "#38bdf8", 0.48, 6),
-        ("C++", "#f472b6", 0.22, 3),
-        ("TypeScript", "#818cf8", 0.16, 3),
-        ("Verilog / TCL", "#c084fc", 0.09, 2),
-        ("SQL / Cypher", "#34d399", 0.05, 4),
+        ("Python", "#38bdf8", 0.48, "AI / RAG / FastAPI"),
+        ("C++", "#f472b6", 0.22, "Systems / DSA"),
+        ("TypeScript", "#818cf8", 0.16, "Next.js / Web"),
+        ("Verilog / TCL", "#c084fc", 0.09, "EDA Automation"),
+        ("SQL / Cypher", "#34d399", 0.05, "Graph DBs"),
     ]
-
-    if user:
-        languages: Counter[tuple[str, str]] = Counter()
-        repos: Counter[str] = Counter()
-        for repo in user["repositories"]["nodes"]:
-            for edge in repo["languages"]["edges"]:
-                key = (edge["node"]["name"], edge["node"]["color"] or MUTED)
-                languages[key] += edge["size"]
-                repos[edge["node"]["name"]] += 1
-        if languages:
-            total = sum(languages.values()) or 1
-            top = languages.most_common(5)
-            top_langs = [(name, color, count / total, repos[name]) for (name, color), count in top]
 
     rows = []
     y = 56
-    for name, color, pct, r_count in top_langs:
+    for name, color, pct, label in top_langs:
         pct_str = f"{pct:.0%}"
         rows.append(f'<text x="16" y="{y}" fill="{FG_MAIN}" font-family="system-ui, sans-serif" font-size="12" font-weight="600">{escape(name)}</text>')
-        rows.append(f'<text x="124" y="{y}" fill="{MUTED}" font-family="\'JetBrains Mono\', monospace" font-size="10">{pct_str} · {r_count} repos</text>')
+        rows.append(f'<text x="124" y="{y}" fill="{MUTED}" font-family="\'JetBrains Mono\', monospace" font-size="10">{pct_str} · {label}</text>')
         bar_width = max(6, round(180 * pct))
         rows.append(f'<rect x="220" y="{y - 10}" width="134" height="9" rx="4.5" fill="#0b0f19"/>')
         rows.append(f'<rect x="220" y="{y - 10}" width="{min(134, bar_width)}" height="9" rx="4.5" fill="{color}"/>')
@@ -274,7 +259,7 @@ def language_card(user: dict | None = None) -> None:
 
       {"".join(rows)}
     '''
-    write("langs.svg", svg(370, 200, body, "Top languages across public repositories"))
+    write("langs.svg", svg(370, 200, body, "Top languages & tech stack"))
 
 
 def main() -> None:
