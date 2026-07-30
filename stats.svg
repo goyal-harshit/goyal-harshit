@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="370" height="180" viewBox="0 0 370 180" role="img" aria-label="Engineering &amp; Profile Stats">
+  <rect width="100%" height="100%" rx="12" fill="#0d1117"/>
+  
+      <defs>
+        <linearGradient id="stats_grad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#38bdf8"/>
+          <stop offset="100%" stop-color="#818cf8"/>
+        </linearGradient>
+      </defs>
+      <rect x="2" y="2" width="366" height="176" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="20" y="28" fill="#8b949e" font-family="monospace" font-size="11" font-weight="700">ENGINEERING &amp; PROFILE STATS</text>
+      
+      <!-- Metrics Grid -->
+      <g transform="translate(20, 48)">
+        <!-- Metric 1 -->
+        <rect x="0" y="0" width="156" height="52" rx="6" fill="#0d1117" stroke="#21262d"/>
+        <text x="12" y="22" fill="#8b949e" font-family="monospace" font-size="9" font-weight="700">PUBLIC REPOS</text>
+        <text x="12" y="42" fill="#38bdf8" font-family="monospace" font-size="18" font-weight="800">12</text>
+
+        <!-- Metric 2 -->
+        <rect x="170" y="0" width="156" height="52" rx="6" fill="#0d1117" stroke="#21262d"/>
+        <text x="182" y="22" fill="#8b949e" font-family="monospace" font-size="9" font-weight="700">IIT DELHI TRACK</text>
+        <text x="182" y="42" fill="#c084fc" font-family="monospace" font-size="18" font-weight="800">EE &#x27;26</text>
+
+        <!-- Metric 3 -->
+        <rect x="0" y="60" width="156" height="52" rx="6" fill="#0d1117" stroke="#21262d"/>
+        <text x="12" y="82" fill="#8b949e" font-family="monospace" font-size="9" font-weight="700">JEE ADVANCED</text>
+        <text x="12" y="102" fill="#3fb950" font-family="monospace" font-size="18" font-weight="800">AIR 530</text>
+
+        <!-- Metric 4 -->
+        <rect x="170" y="60" width="156" height="52" rx="6" fill="#0d1117" stroke="#21262d"/>
+        <text x="182" y="82" fill="#8b949e" font-family="monospace" font-size="9" font-weight="700">ML COMPETITION</text>
+        <text x="182" y="102" fill="#f59e0b" font-family="monospace" font-size="18" font-weight="800">Rank #9</text>
+      </g>
+    
+</svg>

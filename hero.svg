@@ -1,23 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" role="img" aria-label="Harshit Goyal — AI systems and full-stack engineering">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="350" viewBox="0 0 760 350" role="img" aria-label="Harshit Goyal — Software Engineering, AI Systems &amp; VLSI EDA">
   <rect width="100%" height="100%" rx="12" fill="#0d1117"/>
   
       <defs>
-        <linearGradient id="edge" x1="0" x2="1"><stop stop-color="#58a6ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient>
-        <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#21262d" stroke-width="1"/></pattern>
+        <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#38bdf8"/>
+          <stop offset="50%" stop-color="#818cf8"/>
+          <stop offset="100%" stop-color="#c084fc"/>
+        </linearGradient>
+        <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
+          <stop offset="100%" stop-color="#c084fc" stop-opacity="0.05"/>
+        </linearGradient>
+        <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0H0V24" fill="none" stroke="#21262d" stroke-width="1"/>
+        </pattern>
       </defs>
-      <rect x="16" y="16" width="728" height="298" rx="12" fill="#0d1117" stroke="url(#edge)"/>
-      <rect x="16" y="16" width="728" height="298" rx="12" fill="url(#grid)" opacity=".42"/>
-      <circle cx="43" cy="42" r="5" fill="#ff7b72"/><circle cx="61" cy="42" r="5" fill="#d29922"/><circle cx="79" cy="42" r="5" fill="#3fb950"/>
-      <text x="104" y="47" fill="#8b949e" font-family="monospace" font-size="11">profile://harshit_goyal</text>
-      <line x1="32" y1="62" x2="728" y2="62" stroke="#30363d"/>
-      <path d="M530 108h76l19 19h72M558 224h52l18-18h74" fill="none" stroke="#58a6ff" stroke-width="1.5" opacity=".55"/>
-      <circle cx="530" cy="108" r="4" fill="#58a6ff"/><circle cx="702" cy="127" r="4" fill="#d2a8ff"/><circle cx="558" cy="224" r="4" fill="#3fb950"/><circle cx="702" cy="206" r="4" fill="#58a6ff"/>
-      <text x="46" y="102" fill="#8b949e" font-family="monospace" font-size="12">$ whoami</text>
-      <text x="46" y="164" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="50" font-weight="800" letter-spacing="-1">HARSHIT GOYAL</text>
-      <rect x="46" y="181" width="94" height="4" rx="2" fill="url(#edge)"/>
-      <text x="46" y="220" fill="#58a6ff" font-family="monospace" font-size="14" font-weight="700">AI SYSTEMS · FULL-STACK ENGINEERING</text>
-      <rect x="46" y="244" width="153" height="28" rx="14" fill="#161b22" stroke="#30363d"/><text x="60" y="263" fill="#8b949e" font-family="monospace" font-size="10">RESEARCH INFRA</text>
-      <rect x="210" y="244" width="151" height="28" rx="14" fill="#161b22" stroke="#30363d"/><text x="224" y="263" fill="#8b949e" font-family="monospace" font-size="10">DEVELOPER TOOLS</text>
-      <rect x="372" y="244" width="174" height="28" rx="14" fill="#161b22" stroke="#30363d"/><text x="386" y="263" fill="#8b949e" font-family="monospace" font-size="10">PRODUCT ENGINEERING</text>
-      <text x="46" y="296" fill="#d2a8ff" font-family="monospace" font-size="11">IIT DELHI · ELECTRICAL ENGINEERING · 2026</text>
+
+      <!-- Frame & Grid Background -->
+      <rect x="12" y="12" width="736" height="326" rx="12" fill="#0d1117" stroke="url(#edge)" stroke-width="1.5"/>
+      <rect x="12" y="12" width="736" height="326" rx="12" fill="url(#grid)" opacity="0.35"/>
+      <rect x="13" y="13" width="734" height="324" rx="11" fill="url(#glow)"/>
+
+      <!-- Window Control Dots -->
+      <circle cx="38" cy="36" r="5" fill="#ff7b72"/>
+      <circle cx="56" cy="36" r="5" fill="#d29922"/>
+      <circle cx="74" cy="36" r="5" fill="#3fb950"/>
+      <text x="96" y="40" fill="#8b949e" font-family="monospace" font-size="11">profile://goyal-harshit ~ iit-delhi-ee'26</text>
+      <line x1="24" y1="54" x2="736" y2="54" stroke="#30363d"/>
+
+      <!-- Terminal Command & Name Header -->
+      <text x="36" y="82" fill="#8b949e" font-family="monospace" font-size="12">$ whoami</text>
+      <text x="36" y="128" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="800" letter-spacing="-0.5">HARSHIT GOYAL</text>
+      <rect x="36" y="142" width="120" height="4" rx="2" fill="url(#edge)"/>
+
+      <!-- Subtitle Tagline -->
+      <text x="36" y="174" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="700">SOFTWARE (SDE) &amp; AI SYSTEMS · VLSI &amp; EDA ENGINEERING</text>
+      <text x="36" y="196" fill="#8b949e" font-family="system-ui, sans-serif" font-size="12">Electrical Engineering @ IIT Delhi | Ex-Cadence ASIC Synthesis Intern</text>
+
+      <!-- Pill Badges -->
+      <rect x="36" y="218" width="180" height="26" rx="13" fill="#161b22" stroke="#38bdf8" stroke-width="1"/>
+      <text x="48" y="235" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">SOFTWARE ENG (SDE)</text>
+
+      <rect x="226" y="218" width="168" height="26" rx="13" fill="#161b22" stroke="#818cf8" stroke-width="1"/>
+      <text x="238" y="235" fill="#818cf8" font-family="monospace" font-size="10" font-weight="700">AI SYSTEMS &amp; RAG</text>
+
+      <rect x="404" y="218" width="176" height="26" rx="13" fill="#161b22" stroke="#c084fc" stroke-width="1"/>
+      <text x="416" y="235" fill="#c084fc" font-family="monospace" font-size="10" font-weight="700">VLSI &amp; EDA TOOLING</text>
+
+      <!-- Right Graphic / Circuit & Neural Mesh -->
+      <g opacity="0.6">
+        <path d="M600 80 H670 L700 110 V170 L670 200 H610 L580 170 V120 Z" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="4,2"/>
+        <path d="M620 100 H680 L690 110 V150" fill="none" stroke="#c084fc" stroke-width="1.2"/>
+        <circle cx="600" cy="80" r="3.5" fill="#38bdf8"/>
+        <circle cx="700" cy="110" r="3.5" fill="#c084fc"/>
+        <circle cx="670" cy="200" r="3.5" fill="#3fb950"/>
+        <circle cx="610" cy="200" r="3.5" fill="#f59e0b"/>
+        <circle cx="650" cy="135" r="5" fill="#38bdf8"/>
+      </g>
+
+      <!-- Terminal Bottom Bar / Highlights -->
+      <rect x="36" y="264" width="688" height="60" rx="8" fill="#161b22" stroke="#21262d"/>
+      <text x="52" y="286" fill="#8b949e" font-family="monospace" font-size="11">$ cat highlights.json</text>
+      <text x="52" y="306" fill="#3fb950" font-family="monospace" font-size="11">✓ JEE Adv AIR 530</text>
+      <text x="200" y="306" fill="#38bdf8" font-family="monospace" font-size="11">✓ FIFS ML Top 9 National</text>
+      <text x="410" y="306" fill="#c084fc" font-family="monospace" font-size="11">✓ Cadence Synthesis Intern</text>
+
 </svg>
