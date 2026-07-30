@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./hero.svg" width="760" alt="Harshit Goyal — Software Engineering (SDE), AI Systems & EDA Tooling" />
+<img src="./hero.svg?v=2" width="760" alt="Harshit Goyal — Software Engineering (SDE), AI Systems & EDA Tooling" />
 
 <br />
 
@@ -23,7 +23,7 @@
 
 | 📊 Key Engineering Benchmarks | 🛠 Technical Stack & Languages |
 | :---: | :---: |
-| <img src="./stats.svg" width="365" alt="Engineering Stats" /> | <img src="./langs.svg" width="365" alt="Top Languages" /> |
+| <img src="./stats.svg?v=2" width="365" alt="Engineering Stats" /> | <img src="./langs.svg?v=2" width="365" alt="Top Languages" /> |
 
 </div>
 
