@@ -198,7 +198,7 @@ def stats_card(user: dict | None = None) -> None:
       <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
 
       <g transform="translate(14, 48)">
-        <!-- Metric 1: Current Role (Clean SDE @ Samsung to prevent overflow) -->
+        <!-- Metric 1: Current Role -->
         <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">CURRENT ROLE</text>
         <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">SDE @ Samsung</text>
@@ -236,7 +236,7 @@ def language_card(user: dict | None = None) -> None:
     for name, color, pct, label in top_langs:
         pct_str = f"{pct:.0%}"
         rows.append(f'<text x="16" y="{y}" fill="{FG_MAIN}" font-family="system-ui, sans-serif" font-size="12" font-weight="600">{escape(name)}</text>')
-        rows.append(f'<text x="124" y="{y}" fill="{MUTED}" font-family="\'JetBrains Mono\', monospace" font-size="10">{pct_str} · {label}</text>')
+        rows.append(f'<text x="124" y="{y}" fill="{MUTED}" font-family="\'JetBrains Mono\', monospace" font-size="10">{pct_str} · {escape(label)}</text>')
         bar_width = max(6, round(180 * pct))
         rows.append(f'<rect x="220" y="{y - 10}" width="134" height="9" rx="4.5" fill="#0b0f19"/>')
         rows.append(f'<rect x="220" y="{y - 10}" width="{min(134, bar_width)}" height="9" rx="4.5" fill="{color}"/>')
