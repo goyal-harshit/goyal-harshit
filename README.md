@@ -14,7 +14,7 @@
 
 <br />
 
-> **Software Development Engineer (SDE) Associate @ Samsung R&D Institute** · **Electrical Engineering @ IIT Delhi ('26)**  
+> **SDE Associate @ Samsung R&D Institute** · **Electrical Engineering, IIT Delhi '26**  
 > I engineer production-grade software applications (SDE), fine-tune Vision-Language Models (VLMs), multi-provider RAG platforms, knowledge graph developer tools, and high-performance algorithms.
 
 ---
