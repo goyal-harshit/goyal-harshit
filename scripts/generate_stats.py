@@ -175,7 +175,7 @@ def hero() -> None:
 
         <!-- JSON Line 3 -->
         <text x="18" y="100" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"metrics":</text>
-        <text x="110" y="100" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"JEE Adv AIR 530  |  Top 9 National ML  |  0.28s AST Knowledge Graph Parser"</text>
+        <text x="110" y="100" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"JEE Adv AIR 530  |  Top 9 National ML  |  130M+ Users Platform"</text>
       </g>
 '''
     write("hero.svg", svg(WIDTH, 390, body, "Harshit Goyal — SDE Associate @ Samsung R&D | Software & AI Engineer"))
@@ -198,10 +198,10 @@ def stats_card(user: dict | None = None) -> None:
       <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
 
       <g transform="translate(14, 48)">
-        <!-- Metric 1: Codebase AST Parser benchmark -->
+        <!-- Metric 1: Samsung R&D SDE Associate -->
         <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
-        <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">CODEBASE ENGINE</text>
-        <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="16" font-weight="800">0.28s AST Parser</text>
+        <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">SAMSUNG R&amp;D</text>
+        <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="16" font-weight="800">SDE Associate</text>
 
         <!-- Metric 2: IIT Delhi Track -->
         <rect x="178" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
