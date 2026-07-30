@@ -15,13 +15,13 @@
 <br />
 
 > **Electrical Engineering @ IIT Delhi ('26)** · **Software Engineering (SDE) × AI Systems × EDA Tooling**  
-> I turn complex engineering bottlenecks into fast, reliable software. From building a **0.28s knowledge-graph code parser** to gesture-driven diffusion engines and high-concurrency quant backtesters, I ship systems that solve hard technical problems.
+> I engineer production-grade software systems, multi-provider RAG platforms, knowledge graph developer tools, and logic synthesis automation tooling.
 
 ---
 
 <div align="center">
 
-| 📊 System & Metric Benchmarks | 🛠 Core Tech Stack Distribution |
+| 📊 Key Engineering Benchmarks | 🛠 Technical Stack & Languages |
 | :---: | :---: |
 | <img src="./stats.svg" width="365" alt="Engineering Stats" /> | <img src="./langs.svg" width="365" alt="Top Languages" /> |
 
@@ -29,27 +29,25 @@
 
 <br />
 
-## 🛠️ What I Build & Solve
-
-> 💡 **Active Engineering Mindset**: I love tackling high-impact algorithmic & architectural challenges — whether that's static analysis AST graph parsing, real-time computer vision HCI pipelines, or resilient LLM/RAG distributed backends.
+## 🛠️ Featured Systems & Flagship Projects
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/goyal-harshit/codebase-intelligence-platform">Codebase Intelligence Engine</a> 🧠</h3>
-      <code>Knowledge Graph</code> · <code>AST Parsing</code> · <code>Tree-sitter</code> · <code>NL→Cypher</code>
+      <code>AST Parsing</code> · <code>Knowledge Graph</code> · <code>Vector DB</code> · <code>NL→Cypher</code>
       <br /><br />
-      Turns any Git repository into a knowledge graph and vector index. Enables natural language code queries (NL→Cypher with vector fallback), architecture risk detection, and blast-radius calculation. <b>Parsed Flask codebase in 0.28s</b> (388 functions, 53 classes).
+      Turns any Git repository into a knowledge graph and vector index. Enables natural language code Q&amp;A (NL→Cypher with semantic vector fallback), architecture risk detection, and blast-radius impact calculation. <b>Parsed Flask codebase in 0.28s</b> (388 functions, 53 classes).
       <br /><br />
       <b>Stack:</b> tree-sitter · ArcadeDB · ChromaDB · FastAPI · Next.js · Docker
       <br /><br />
       🔗 <a href="https://goyal-harshit.github.io/codebase-intelligence-platform">Live System Demo →</a>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/goyal-harshit/quant-analyzer">QuantAI Platform</a> ⚡</h3>
-      <code>SDE</code> · <code>Quant Engine</code> · <code>Multi-LLM RAG</code> · <code>Distributed DBs</code>
+      <h3><a href="https://github.com/goyal-harshit/quant-analyzer">QuantAI Research Platform</a> ⚡</h3>
+      <code>SDE</code> · <code>Quant Engine</code> · <code>Multi-LLM RAG</code> · <code>Resilient Architecture</code>
       <br /><br />
-      India-first equity quant research platform for NSE/BSE. Features factor screeners, backtesting algorithms, portfolio analysis, Monte Carlo simulation lab, and a multi-provider AI research assistant with fallback chains, JWT+CSRF auth, and Prometheus observability.
+      India-first quantitative equity research platform for NSE/BSE. Features factor screeners, backtesting algorithms, portfolio analysis, Monte Carlo simulation lab, and a multi-provider AI research assistant with circuit breakers, JWT+CSRF auth, and Prometheus observability.
       <br /><br />
       <b>Stack:</b> FastAPI · Next.js 14 · PostgreSQL / TimescaleDB · Redis · Celery · Docker
       <br /><br />
@@ -68,7 +66,7 @@
       🔗 <a href="https://goyal-harshit.github.io/intuitive-prompt-engine">Live HCI Demo →</a>
     </td>
     <td width="50%" valign="top">
-      <h3>Fantasy Cricket ML Engine 🏏</h3>
+      <h3>Fantasy Cricket ML Predictor 🏏</h3>
       <code>Ensemble ML</code> · <code>Optimization</code> · <code>Data Science</code>
       <br /><br />
       Ensemble ML system for player performance forecasting and optimal team selection under fantasy constraints. Competed nationally and achieved <b>Top 9 Rank</b> overall in FIFS Gameathon 2025.
@@ -85,7 +83,7 @@
 ## 💼 Work Experience
 
 - 🏢 **Cadence Design Systems** — *Software & EDA Intern (2025)*  
-  Engineered synthesis automation workflows, developed Python netlist analysis tools, and authored TCL scripts for software synthesis flow optimization.
+  Engineered synthesis flow automation, developed Python netlist analysis tools, and authored TCL scripts for software synthesis flow optimization.
 - 🏢 **PwC India** — *Technology Consulting Intern (2024)*  
   Engineered digitized financial and workflow management systems serving a **130M+ farmer** user base.
 - 🌍 **Cape Peninsula University of Technology, South Africa** — *AI Research Intern (2023–2024)*  
@@ -104,7 +102,7 @@
 
 ---
 
-## 🏆 Honors & Key Achievements
+## 🏆 Honors & Key Benchmarks
 
 - 🥇 **JEE Advanced 2022 — AIR 530** (GE) among 250,000+ candidates.
 - 🎯 **JEE Main 2022 — 99.74 Percentile** among 1,000,000+ candidates.

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Draw this profile's local SVG graphics from GitHub's GraphQL API.
 
-Supports both GitHub Actions execution (with GITHUB_TOKEN & GH_LOGIN)
-and local fallback execution so graphics can be previewed anytime.
+Produces high-impact, Vercel/Linear-grade dark glassmorphic graphics
+highlighting Harshit Goyal's SDE, AI Systems, and EDA engineering track.
 """
 
 from __future__ import annotations
@@ -16,15 +16,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 WIDTH = 760
-BG = "#090d16"
-CARD_BG = "#111726"
-BORDER = "#1f293d"
-FG = "#f1f5f9"
+
+# Palette - High-contrast modern dark mode
+BG = "#0b0f19"
+CARD_BG = "#131b2e"
+CARD_BORDER = "#2a364f"
+FG_BRIGHT = "#ffffff"
+FG_MAIN = "#f1f5f9"
 MUTED = "#94a3b8"
+
 CYAN = "#38bdf8"
-GREEN = "#4ade80"
+CYAN_GLOW = "#0284c7"
 PURPLE = "#c084fc"
-AMBER = "#fbbf24"
+GREEN = "#34d399"
+GOLD = "#fbbf24"
 PINK = "#f472b6"
 
 
@@ -63,13 +68,8 @@ def graphql(login: str, token: str) -> dict | None:
 
 def svg(width: int, height: int, body: str, title: str) -> str:
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(title)}">
-  <rect width="100%" height="100%" rx="14" fill="{BG}"/>
   {body}
 </svg>\n'''
-
-
-def text(x: int, y: int, value: str, size: int = 13, color: str = FG, weight: int = 400, family: str = "monospace") -> str:
-    return f'<text x="{x}" y="{y}" fill="{color}" font-family="{family}" font-size="{size}" font-weight="{weight}">{escape(value)}</text>'
 
 
 def write(name: str, content: str) -> None:
@@ -79,108 +79,149 @@ def write(name: str, content: str) -> None:
 def hero() -> None:
     body = '''
       <defs>
-        <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+        <!-- Gradients -->
+        <linearGradient id="bg_grad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0b0f19"/>
+          <stop offset="100%" stop-color="#070a12"/>
+        </linearGradient>
+        <linearGradient id="border_glow" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stop-color="#38bdf8"/>
           <stop offset="50%" stop-color="#818cf8"/>
           <stop offset="100%" stop-color="#c084fc"/>
         </linearGradient>
-        <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.18"/>
-          <stop offset="100%" stop-color="#c084fc" stop-opacity="0.04"/>
+        <linearGradient id="name_grad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#ffffff"/>
+          <stop offset="60%" stop-color="#e0f2fe"/>
+          <stop offset="100%" stop-color="#38bdf8"/>
         </linearGradient>
-        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M20 0H0V20" fill="none" stroke="#1e293b" stroke-width="1"/>
+        <linearGradient id="box_bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#111827" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#0b0f19" stop-opacity="0.95"/>
+        </linearGradient>
+        <pattern id="grid_dots" width="24" height="24" patternUnits="userSpaceOnUse">
+          <circle cx="12" cy="12" r="1" fill="#1e293b" opacity="0.6"/>
         </pattern>
-        <filter id="neon_blur" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="3" result="blur"/>
+        <filter id="glow_filter" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="4" result="blur"/>
           <feComposite in="SourceGraphic" in2="blur" operator="over"/>
         </filter>
       </defs>
 
-      <!-- Frame & Tech Grid -->
-      <rect x="10" y="10" width="740" height="360" rx="14" fill="#090d16" stroke="url(#edge)" stroke-width="1.5"/>
-      <rect x="10" y="10" width="740" height="360" rx="14" fill="url(#grid)" opacity="0.4"/>
-      <rect x="11" y="11" width="738" height="358" rx="13" fill="url(#glow)"/>
+      <!-- Background & Border -->
+      <rect width="760" height="390" rx="16" fill="url(#bg_grad)"/>
+      <rect x="1" y="1" width="758" height="388" rx="15" fill="none" stroke="url(#border_glow)" stroke-width="1.5"/>
+      <rect width="760" height="390" rx="16" fill="url(#grid_dots)" opacity="0.7"/>
 
-      <!-- Window Header Bar -->
-      <circle cx="34" cy="32" r="5" fill="#ef4444"/>
-      <circle cx="50" cy="32" r="5" fill="#f59e0b"/>
-      <circle cx="66" cy="32" r="5" fill="#10b981"/>
-      <text x="86" y="36" fill="#64748b" font-family="monospace" font-size="11">harshit@iit-delhi:~/builder-manifest $ ./ship_systems.sh --verbose</text>
-      <circle cx="718" cy="32" r="4" fill="#4ade80" filter="url(#neon_blur)"/>
-      <text x="635" y="36" fill="#4ade80" font-family="monospace" font-size="10" font-weight="700">🟢 ALWAYS BUILDING</text>
-      <line x1="20" y1="48" x2="740" y2="48" stroke="#1e293b"/>
+      <!-- Window Title Bar -->
+      <rect x="1" y="1" width="758" height="42" rx="15" fill="#0f172a" opacity="0.8"/>
+      <circle cx="28" cy="21" r="5.5" fill="#ef4444"/>
+      <circle cx="46" cy="21" r="5.5" fill="#f59e0b"/>
+      <circle cx="64" cy="21" r="5.5" fill="#10b981"/>
+      <text x="84" y="25" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">harshit@iit-delhi:~/builder-profile $ ./run_systems.sh</text>
 
-      <!-- Main Developer Title -->
-      <text x="32" y="78" fill="#94a3b8" font-family="monospace" font-size="12">$ whoami --fields=name,track,passions</text>
-      <text x="32" y="122" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="-1">HARSHIT GOYAL</text>
-      <rect x="32" y="134" width="140" height="4" rx="2" fill="url(#edge)"/>
+      <!-- Live Status Badge -->
+      <rect x="612" y="11" width="134" height="20" rx="10" fill="#064e3b" stroke="#059669" stroke-width="1"/>
+      <circle cx="624" cy="21" r="4" fill="#34d399" filter="url(#glow_filter)"/>
+      <text x="634" y="25" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">BUILDING &amp; SHIPPING</text>
+      <line x1="1" y1="42" x2="759" y2="42" stroke="#1e293b"/>
 
-      <!-- Subtitle Tagline -->
-      <text x="32" y="164" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="700">SOFTWARE (SDE) &amp; AI SYSTEMS ENGINEER · EDA TOOLING</text>
-      <text x="32" y="184" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Electrical Engineering @ IIT Delhi ('26) · Ex-Cadence Software &amp; EDA Intern</text>
+      <!-- Main Header Section -->
+      <g transform="translate(28, 62)">
+        <text x="0" y="20" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600">$ whoami</text>
 
-      <!-- Pill Badges -->
-      <rect x="32" y="204" width="170" height="26" rx="13" fill="#111726" stroke="#38bdf8" stroke-width="1"/>
-      <text x="44" y="221" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">SOFTWARE ENG (SDE)</text>
+        <!-- Candidate Name -->
+        <text x="0" y="60" fill="url(#name_grad)" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="900" letter-spacing="-1">HARSHIT GOYAL</text>
+        <rect x="0" y="70" width="150" height="4" rx="2" fill="url(#border_glow)"/>
 
-      <rect x="212" y="204" width="160" height="26" rx="13" fill="#111726" stroke="#818cf8" stroke-width="1"/>
-      <text x="224" y="221" fill="#818cf8" font-family="monospace" font-size="10" font-weight="700">AI SYSTEMS &amp; RAG</text>
+        <!-- Tagline -->
+        <text x="0" y="96" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">SOFTWARE ENGINEERING (SDE) · AI SYSTEMS · EDA TOOLING</text>
+        <text x="0" y="116" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Electrical Engineering @ IIT Delhi ('26)  ·  Ex-Cadence Software &amp; EDA Intern</text>
 
-      <rect x="382" y="204" width="170" height="26" rx="13" fill="#111726" stroke="#c084fc" stroke-width="1"/>
-      <text x="394" y="221" fill="#c084fc" font-family="monospace" font-size="10" font-weight="700">EDA &amp; COMPILER TOOLS</text>
+        <!-- Skill Badges -->
+        <g transform="translate(0, 132)">
+          <!-- Pill 1 -->
+          <rect x="0" y="0" width="168" height="26" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+          <text x="12" y="17" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">⚡ SOFTWARE ENG (SDE)</text>
 
-      <rect x="562" y="204" width="158" height="26" rx="13" fill="#111726" stroke="#f472b6" stroke-width="1"/>
-      <text x="574" y="221" fill="#f472b6" font-family="monospace" font-size="10" font-weight="700">GRAPH ALGORITHMS</text>
+          <!-- Pill 2 -->
+          <rect x="178" y="0" width="158" height="26" rx="6" fill="#0f172a" stroke="#818cf8" stroke-width="1"/>
+          <text x="190" y="17" fill="#818cf8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">🧠 AI SYSTEMS &amp; RAG</text>
 
-      <!-- Tech Nerd Interactive Manifest Box -->
-      <rect x="32" y="246" width="688" height="110" rx="10" fill="#0d1322" stroke="#1e293b"/>
-      <text x="48" y="268" fill="#64748b" font-family="monospace" font-size="11">$ cat ~/builder_manifest.json</text>
-      
-      <text x="48" y="292" fill="#38bdf8" font-family="monospace" font-size="11">"status":</text>
-      <text x="125" y="292" fill="#f1f5f9" font-family="monospace" font-size="11">"Building fast, reliable software &amp; AI platforms that scale"</text>
+          <!-- Pill 3 -->
+          <rect x="346" y="0" width="176" height="26" rx="6" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+          <text x="358" y="17" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">⚙️ EDA &amp; COMPILER TOOLS</text>
 
-      <text x="48" y="314" fill="#818cf8" font-family="monospace" font-size="11">"loop":</text>
-      <text x="105" y="314" fill="#4ade80" font-family="monospace" font-size="11">["Identify Hard Problem", "Design Graph/RAG Arch", "Code &amp; Benchmark", "Ship 📦"]</text>
+          <!-- Pill 4 -->
+          <rect x="532" y="0" width="170" height="26" rx="6" fill="#0f172a" stroke="#f472b6" stroke-width="1"/>
+          <text x="544" y="17" fill="#f472b6" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">🔍 GRAPH ALGORITHMS</text>
+        </g>
+      </g>
 
-      <text x="48" y="336" fill="#c084fc" font-family="monospace" font-size="11">"benchmarks":</text>
-      <text x="155" y="336" fill="#fbbf24" font-family="monospace" font-size="11">"0.28s AST Parser (388 fns) · JEE AIR 530 · FIFS ML Top 9 National"</text>
+      <!-- Clean Terminal Manifest Code Block -->
+      <g transform="translate(28, 236)">
+        <rect width="704" height="130" rx="10" fill="url(#box_bg)" stroke="#1e293b" stroke-width="1.5"/>
+
+        <!-- Header line -->
+        <text x="18" y="24" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">$ cat ~/profile_manifest.json</text>
+        <line x1="18" y1="32" x2="686" y2="32" stroke="#1e293b" stroke-dasharray="4,4"/>
+
+        <!-- JSON Line 1 -->
+        <text x="18" y="52" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"focus":</text>
+        <text x="110" y="52" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="12">"High-performance SDE applications, RAG platforms &amp; compiler/EDA tooling"</text>
+
+        <!-- JSON Line 2 -->
+        <text x="18" y="76" fill="#818cf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"stack":</text>
+        <text x="110" y="76" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12">"Python · C++ · TypeScript · FastAPI · Next.js · PostgreSQL · Docker · TCL"</text>
+
+        <!-- JSON Line 3 -->
+        <text x="18" y="100" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"metrics":</text>
+        <text x="110" y="100" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"JEE Adv AIR 530  |  Top 9 National ML  |  0.28s AST Knowledge Graph Parser"</text>
+      </g>
 '''
-    write("hero.svg", svg(WIDTH, 380, body, "Harshit Goyal — Software Engineering (SDE), AI Systems & EDA Tooling"))
+    write("hero.svg", svg(WIDTH, 390, body, "Harshit Goyal — Software Engineering (SDE), AI Systems & EDA Tooling"))
 
 
 def stats_card(user: dict | None = None) -> None:
     repo_count = len(user["repositories"]["nodes"]) if user else 12
 
     body = f'''
-      <rect x="2" y="2" width="366" height="186" rx="10" fill="{CARD_BG}" stroke="{BORDER}"/>
-      {text(18, 26, "⚡ REPO LOGIC & SYSTEM METRICS", 11, MUTED, 700)}
-      
-      <g transform="translate(18, 42)">
-        <!-- Metric 1 -->
-        <rect x="0" y="0" width="160" height="56" rx="8" fill="#090d16" stroke="#1f293d"/>
-        {text(12, 22, "PUBLIC REPOS", 9, MUTED, 700)}
-        {text(12, 44, f"{repo_count}+ Shipped", 15, CYAN, 800)}
+      <defs>
+        <linearGradient id="card_grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#131b2e"/>
+          <stop offset="100%" stop-color="#0b0f19"/>
+        </linearGradient>
+      </defs>
 
-        <!-- Metric 2 -->
-        <rect x="172" y="0" width="160" height="56" rx="8" fill="#090d16" stroke="#1f293d"/>
-        {text(184, 22, "IIT DELHI ALUM TRACK", 9, MUTED, 700)}
-        {text(184, 44, "EE Class '26", 15, PURPLE, 800)}
+      <rect width="370" height="200" rx="12" fill="url(#card_grad)" stroke="{CARD_BORDER}" stroke-width="1.5"/>
 
-        <!-- Metric 3 -->
-        <rect x="0" y="66" width="160" height="56" rx="8" fill="#090d16" stroke="#1f293d"/>
-        {text(12, 88, "JEE ADVANCED", 9, MUTED, 700)}
-        {text(12, 110, "AIR 530", 16, GREEN, 800)}
+      <!-- Card Title Bar -->
+      <rect x="1" y="1" width="368" height="36" rx="11" fill="#0f172a" opacity="0.9"/>
+      <text x="16" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">📊 REPO &amp; COMPETITIVE METRICS</text>
+      <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
 
-        <!-- Metric 4 -->
-        <rect x="172" y="66" width="160" height="56" rx="8" fill="#090d16" stroke="#1f293d"/>
-        {text(184, 88, "ML COMPETITION", 9, MUTED, 700)}
-        {text(184, 110, "Rank #9 National", 14, AMBER, 800)}
+      <g transform="translate(14, 48)">
+        <!-- Metric 1: Public Repos -->
+        <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
+        <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">PUBLIC REPOSITORIES</text>
+        <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="20" font-weight="800">{repo_count}+ Systems</text>
+
+        <!-- Metric 2: IIT Delhi Track -->
+        <rect x="178" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
+        <text x="190" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">IIT DELHI TRACK</text>
+        <text x="190" y="46" fill="#c084fc" font-family="system-ui, sans-serif" font-size="20" font-weight="800">EE Class '26</text>
+
+        <!-- Metric 3: JEE Adv AIR 530 -->
+        <rect x="0" y="72" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
+        <text x="12" y="92" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">JEE ADVANCED 2022</text>
+        <text x="12" y="118" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="20" font-weight="800">AIR 530</text>
+
+        <!-- Metric 4: ML Competition -->
+        <rect x="178" y="72" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
+        <text x="190" y="92" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">FIFS ML GAMEATHON</text>
+        <text x="190" y="118" fill="#34d399" font-family="system-ui, sans-serif" font-size="20" font-weight="800">Rank #9 Nat'l</text>
       </g>
-      
-      <rect x="18" y="168" width="332" height="1" fill="#1f293d"/>
     '''
-    write("stats.svg", svg(370, 190, body, "Engineering & Profile Stats"))
+    write("stats.svg", svg(370, 200, body, "Engineering & Profile Stats"))
 
 
 def language_card(user: dict | None = None) -> None:
@@ -189,7 +230,7 @@ def language_card(user: dict | None = None) -> None:
         ("C++", "#f472b6", 0.22, 3),
         ("TypeScript", "#818cf8", 0.16, 3),
         ("Verilog / TCL", "#c084fc", 0.09, 2),
-        ("SQL / Cypher", "#4ade80", 0.05, 4),
+        ("SQL / Cypher", "#34d399", 0.05, 4),
     ]
 
     if user:
@@ -205,22 +246,35 @@ def language_card(user: dict | None = None) -> None:
             top = languages.most_common(5)
             top_langs = [(name, color, count / total, repos[name]) for (name, color), count in top]
 
-    rows = [text(18, 26, "💻 CORE LANGUAGES & STACK DISTRIBUTION", 11, MUTED, 700)]
-    y = 52
+    rows = []
+    y = 56
     for name, color, pct, r_count in top_langs:
         pct_str = f"{pct:.0%}"
-        rows.append(text(18, y, name[:14], 12, FG, 600))
-        rows.append(text(125, y, f"{pct_str} · {r_count} repos", 10, MUTED))
+        rows.append(f'<text x="16" y="{y}" fill="{FG_MAIN}" font-family="system-ui, sans-serif" font-size="12" font-weight="600">{escape(name)}</text>')
+        rows.append(f'<text x="124" y="{y}" fill="{MUTED}" font-family="\'JetBrains Mono\', monospace" font-size="10">{pct_str} · {r_count} repos</text>')
         bar_width = max(6, round(180 * pct))
-        rows.append(f'<rect x="220" y="{y - 10}" width="130" height="8" rx="4" fill="#090d16"/>')
-        rows.append(f'<rect x="220" y="{y - 10}" width="{min(130, bar_width)}" height="8" rx="4" fill="{color}"/>')
-        y += 26
+        rows.append(f'<rect x="220" y="{y - 10}" width="134" height="9" rx="4.5" fill="#0b0f19"/>')
+        rows.append(f'<rect x="220" y="{y - 10}" width="{min(134, bar_width)}" height="9" rx="4.5" fill="{color}"/>')
+        y += 27
 
     body = f'''
-      <rect x="2" y="2" width="366" height="186" rx="10" fill="{CARD_BG}" stroke="{BORDER}"/>
+      <defs>
+        <linearGradient id="card_grad2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#131b2e"/>
+          <stop offset="100%" stop-color="#0b0f19"/>
+        </linearGradient>
+      </defs>
+
+      <rect width="370" height="200" rx="12" fill="url(#card_grad2)" stroke="{CARD_BORDER}" stroke-width="1.5"/>
+
+      <!-- Card Title Bar -->
+      <rect x="1" y="1" width="368" height="36" rx="11" fill="#0f172a" opacity="0.9"/>
+      <text x="16" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">💻 TECH STACK &amp; LANGUAGES</text>
+      <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
+
       {"".join(rows)}
     '''
-    write("langs.svg", svg(370, 190, body, "Top languages across public repositories"))
+    write("langs.svg", svg(370, 200, body, "Top languages across public repositories"))
 
 
 def main() -> None:
@@ -236,7 +290,7 @@ def main() -> None:
     hero()
     stats_card(user)
     language_card(user)
-    print("[OK] Successfully generated hero.svg, stats.svg, and langs.svg")
+    print("[OK] Successfully generated high-impact hero.svg, stats.svg, and langs.svg")
 
 
 if __name__ == "__main__":
