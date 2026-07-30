@@ -15,15 +15,15 @@
       <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
 
       <g transform="translate(14, 48)">
-        <!-- Metric 1: Current Role (Samsung Associate) -->
+        <!-- Metric 1: Current Role (Clean SDE @ Samsung to prevent overflow) -->
         <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">CURRENT ROLE</text>
-        <text x="12" y="45" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13.5" font-weight="800">Samsung SDE Associate</text>
+        <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">SDE @ Samsung</text>
 
         <!-- Metric 2: IIT Delhi Track -->
         <rect x="178" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="190" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">IIT DELHI TRACK</text>
-        <text x="190" y="46" fill="#c084fc" font-family="system-ui, sans-serif" font-size="18" font-weight="800">EE Class '26</text>
+        <text x="190" y="46" fill="#c084fc" font-family="system-ui, sans-serif" font-size="17.5" font-weight="800">EE Class '26</text>
 
         <!-- Metric 3: JEE Adv AIR 530 -->
         <rect x="0" y="72" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
