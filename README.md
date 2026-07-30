@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./hero.svg?v=5" width="760" alt="Harshit Goyal — SDE Intern @ Samsung R&D | Software Engineering (SDE) & AI Systems" />
+<img src="./hero.svg?v=6" width="760" alt="Harshit Goyal — SDE Associate @ Samsung R&D | Software Engineering (SDE) & AI Systems" />
 
 <br />
 
@@ -14,8 +14,8 @@
 
 <br />
 
-> **Software Development Engineer (SDE) Intern @ Samsung R&D Institute** · **Electrical Engineering @ IIT Delhi ('26)**  
-> I engineer production-grade software applications, fine-tune Vision-Language Models (VLMs), multi-provider RAG platforms, knowledge graph developer tools, and logic synthesis automation tooling.
+> **Software Development Engineer (SDE) Associate @ Samsung R&D Institute** · **Electrical Engineering @ IIT Delhi ('26)**  
+> I engineer production-grade software applications (SDE), fine-tune Vision-Language Models (VLMs), multi-provider RAG platforms, knowledge graph developer tools, and high-performance algorithms.
 
 ---
 
@@ -23,7 +23,7 @@
 
 | 📊 Key Engineering Benchmarks | 🛠 Technical Stack & Languages |
 | :---: | :---: |
-| <img src="./stats.svg?v=5" width="365" alt="Engineering Stats" /> | <img src="./langs.svg?v=5" width="365" alt="Top Languages" /> |
+| <img src="./stats.svg?v=6" width="365" alt="Engineering Stats" /> | <img src="./langs.svg?v=6" width="365" alt="Top Languages" /> |
 
 </div>
 
@@ -82,13 +82,13 @@
 
 ## 💼 Work Experience
 
-- 📱 **Samsung R&D Institute** — *Software Development Engineer (SDE) Intern (Jul 2026 – Present)*  
+- 📱 **Samsung R&D Institute** — *Software Development Engineer (SDE) Associate (Jul 2026 – Present)*  
   Training and fine-tuning Vision-Language Models (VLMs) to engineer custom multimodal AI solutions for product applications.
-- 🏢 **Cadence Design Systems** — *Software Development Intern (EDA) (May 2025 – Jul 2025)*  
+- 🏢 **Cadence Design Systems** — *Software Development Associate (EDA) (May 2025 – Jul 2025)*  
   Executed RTL-to-Pre-CTS synthesis flows on Genus and Innovus, built Python netlist-parsing tools extracting cell utilization &amp; QoR metrics, and migrated legacy TCL automation to Python.
-- 🏢 **PwC India** — *Technology Consulting Intern (Jun 2024 – Jul 2024)*  
+- 🏢 **PwC India** — *Technology Consulting Associate (Jun 2024 – Jul 2024)*  
   Digitized financial workflows for a PACS cooperative network serving **130M+ farmers**; automated data processing in Python, cutting execution time by 15%.
-- 🌍 **Cape Peninsula University of Technology, South Africa** — *AI Research Intern (Dec 2023 – Jan 2024)*  
+- 🌍 **Cape Peninsula University of Technology, South Africa** — *AI Research Associate (Dec 2023 – Jan 2024)*  
   Researched AI-enabled smart microgrids and edge-deployment constraints, building a structured evaluation framework and technical report.
 
 ---

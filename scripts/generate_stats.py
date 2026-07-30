@@ -2,7 +2,7 @@
 """Draw this profile's local SVG graphics from GitHub's GraphQL API.
 
 Produces high-impact, Vercel/Linear-grade dark glassmorphic graphics
-highlighting Harshit Goyal's SDE, Multimodal AI, and Systems track.
+highlighting Harshit Goyal's Software Engineering (SDE) and AI Systems track.
 """
 
 from __future__ import annotations
@@ -117,12 +117,12 @@ def hero() -> None:
       <circle cx="28" cy="21" r="5.5" fill="#ef4444"/>
       <circle cx="46" cy="21" r="5.5" fill="#f59e0b"/>
       <circle cx="64" cy="21" r="5.5" fill="#10b981"/>
-      <text x="84" y="25" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">harshit@iit-delhi:~/samsung-rnd $ ./run_systems.sh</text>
+      <text x="84" y="25" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">harshit@iit-delhi:~/samsung-rnd $ ./run_sde.sh</text>
 
       <!-- Live Status Badge -->
-      <rect x="580" y="11" width="166" height="20" rx="10" fill="#064e3b" stroke="#059669" stroke-width="1"/>
-      <circle cx="592" cy="21" r="4" fill="#34d399" filter="url(#glow_filter)"/>
-      <text x="602" y="25" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">SDE INTERN @ SAMSUNG R&amp;D</text>
+      <rect x="566" y="11" width="180" height="20" rx="10" fill="#064e3b" stroke="#059669" stroke-width="1"/>
+      <circle cx="578" cy="21" r="4" fill="#34d399" filter="url(#glow_filter)"/>
+      <text x="588" y="25" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">SDE ASSOCIATE @ SAMSUNG R&amp;D</text>
       <line x1="1" y1="42" x2="759" y2="42" stroke="#1e293b"/>
 
       <!-- Main Header Section -->
@@ -134,8 +134,8 @@ def hero() -> None:
         <rect x="0" y="70" width="150" height="4" rx="2" fill="url(#border_glow)"/>
 
         <!-- Tagline -->
-        <text x="0" y="96" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">SOFTWARE ENGINEER (SDE) · MULTIMODAL AI &amp; SYSTEMS</text>
-        <text x="0" y="116" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="500">SDE Intern @ Samsung R&amp;D  ·  B.Tech Electrical Engineering @ IIT Delhi ('26)</text>
+        <text x="0" y="96" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">SOFTWARE DEVELOPMENT ENGINEER (SDE) · AI SYSTEMS</text>
+        <text x="0" y="116" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="500">SDE Associate @ Samsung R&amp;D  ·  B.Tech Electrical Engineering @ IIT Delhi ('26)</text>
 
         <!-- Skill Badges -->
         <g transform="translate(0, 132)">
@@ -153,7 +153,7 @@ def hero() -> None:
 
           <!-- Pill 4 -->
           <rect x="532" y="0" width="170" height="26" rx="6" fill="#0f172a" stroke="#f472b6" stroke-width="1"/>
-          <text x="544" y="17" fill="#f472b6" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">🔍 HIGH-PERF ALGOS</text>
+          <text x="544" y="17" fill="#f472b6" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">🔍 CORE SDE &amp; ALGOS</text>
         </g>
       </g>
 
@@ -167,7 +167,7 @@ def hero() -> None:
 
         <!-- JSON Line 1 -->
         <text x="18" y="52" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"current":</text>
-        <text x="110" y="52" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"SDE Intern @ Samsung R&amp;D (Fine-tuning Vision-Language Models)"</text>
+        <text x="110" y="52" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"SDE Associate @ Samsung R&amp;D Institute (Multimodal AI &amp; VLMs)"</text>
 
         <!-- JSON Line 2 -->
         <text x="18" y="76" fill="#818cf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"focus":</text>
@@ -178,7 +178,7 @@ def hero() -> None:
         <text x="110" y="100" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">"JEE Adv AIR 530  |  Top 9 National ML  |  0.28s AST Knowledge Graph Parser"</text>
       </g>
 '''
-    write("hero.svg", svg(WIDTH, 390, body, "Harshit Goyal — SDE Intern @ Samsung R&D | Software & AI Engineer"))
+    write("hero.svg", svg(WIDTH, 390, body, "Harshit Goyal — SDE Associate @ Samsung R&D | Software & AI Engineer"))
 
 
 def stats_card(user: dict | None = None) -> None:
@@ -201,7 +201,7 @@ def stats_card(user: dict | None = None) -> None:
         <!-- Metric 1: Current Role -->
         <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">CURRENT ROLE</text>
-        <text x="12" y="45" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Samsung SDE Intern</text>
+        <text x="12" y="45" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13.5" font-weight="800">Samsung SDE Associate</text>
 
         <!-- Metric 2: IIT Delhi Track -->
         <rect x="178" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
@@ -225,9 +225,9 @@ def stats_card(user: dict | None = None) -> None:
 def language_card(user: dict | None = None) -> None:
     top_langs = [
         ("Python", "#38bdf8", 0.48, "VLMs / PyTorch / FastAPI"),
-        ("C++", "#f472b6", 0.22, "Systems / DSA"),
+        ("C++", "#f472b6", 0.22, "Core SDE / Systems"),
         ("TypeScript", "#818cf8", 0.16, "Next.js 14 / React"),
-        ("Verilog / TCL", "#c084fc", 0.09, "Scripting / EDA"),
+        ("Verilog / TCL", "#c084fc", 0.09, "Scripting / Logic"),
         ("SQL / Cypher", "#34d399", 0.05, "Graph & Vector DBs"),
     ]
 
