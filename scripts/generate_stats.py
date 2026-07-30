@@ -194,14 +194,14 @@ def stats_card(user: dict | None = None) -> None:
 
       <!-- Card Title Bar -->
       <rect x="1" y="1" width="368" height="36" rx="11" fill="#0f172a" opacity="0.9"/>
-      <text x="16" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">📊 EXPERIENCE &amp; COMPETITIVE METRICS</text>
+      <text x="16" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">📊 COMPETITIVE &amp; ENGINEERING BENCHMARKS</text>
       <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
 
       <g transform="translate(14, 48)">
-        <!-- Metric 1: Current Role -->
+        <!-- Metric 1: JEE Main 2022 -->
         <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
-        <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">CURRENT ROLE</text>
-        <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="15.5" font-weight="800">SDE @ Samsung</text>
+        <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">JEE MAIN 2022</text>
+        <text x="12" y="46" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="17" font-weight="800">99.74 %ile</text>
 
         <!-- Metric 2: IIT Delhi Track -->
         <rect x="178" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
@@ -219,7 +219,7 @@ def stats_card(user: dict | None = None) -> None:
         <text x="190" y="118" fill="#34d399" font-family="system-ui, sans-serif" font-size="17" font-weight="800">Rank #9 Nat'l</text>
       </g>
     '''
-    write("stats.svg", svg(370, 200, body, "Experience & Profile Stats"))
+    write("stats.svg", svg(370, 200, body, "Competitive Engineering Metrics"))
 
 
 def language_card(user: dict | None = None) -> None:
