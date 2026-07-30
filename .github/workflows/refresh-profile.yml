@@ -26,7 +26,7 @@ jobs:
         run: python3 scripts/generate_stats.py
       - name: Commit only changed graphics
         run: |
-          files="hero.svg stats.svg streak.svg langs.svg"
+          files="hero.svg langs.svg"
           test -z "$(git status --porcelain -- $files)" && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

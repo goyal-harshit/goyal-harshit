@@ -17,10 +17,6 @@
 
 <br />
 
-<img src="./stats.svg" width="760" alt="Live public GitHub contribution total and weekly activity" />
-<br />
-<img src="./streak.svg" width="760" alt="Current and longest public contribution streaks" />
-<br />
 <img src="./langs.svg" width="760" alt="Top languages across public repositories" />
 
 <br />
