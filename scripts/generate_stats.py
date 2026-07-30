@@ -119,7 +119,7 @@ def hero() -> None:
       <circle cx="64" cy="21" r="5.5" fill="#10b981"/>
       <text x="84" y="25" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">harshit@iit-delhi:~/samsung-rnd $ ./run_sde.sh</text>
 
-      <!-- Live Status Badge -->
+      <!-- Live Status Badge (Only Samsung uses Associate) -->
       <rect x="566" y="11" width="180" height="20" rx="10" fill="#064e3b" stroke="#059669" stroke-width="1"/>
       <circle cx="578" cy="21" r="4" fill="#34d399" filter="url(#glow_filter)"/>
       <text x="588" y="25" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">SDE ASSOCIATE @ SAMSUNG R&amp;D</text>
@@ -198,7 +198,7 @@ def stats_card(user: dict | None = None) -> None:
       <line x1="1" y1="37" x2="369" y2="37" stroke="#1e293b"/>
 
       <g transform="translate(14, 48)">
-        <!-- Metric 1: Current Role -->
+        <!-- Metric 1: Current Role (Samsung Associate) -->
         <rect x="0" y="0" width="164" height="62" rx="8" fill="#0b0f19" stroke="#1e293b"/>
         <text x="12" y="20" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">CURRENT ROLE</text>
         <text x="12" y="45" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13.5" font-weight="800">Samsung SDE Associate</text>
